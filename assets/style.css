@@ -382,3 +382,4 @@ html.js .rv.in{opacity:1;transform:none}
 .dock{background:#f6f3ec;border-top:1px solid rgba(35,65,61,.08)}
 .menu summary{white-space:nowrap;flex:none}.menu{flex:none}.logo{min-width:0}.logo span{min-width:0;overflow:hidden;text-overflow:ellipsis}
 .logo span{overflow:visible;white-space:normal}.logo b{white-space:nowrap}.logo small{white-space:normal}
+.logo small span{white-space:nowrap;display:inline-block}
