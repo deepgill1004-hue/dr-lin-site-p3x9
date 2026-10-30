@@ -507,3 +507,12 @@ html.js .rv.in{opacity:1;transform:none}
 .menu-panel .ic svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .menu-panel a{white-space:nowrap}
 @media(max-width:400px){.menu-panel a{font-size:16px;gap:8px;padding:10px}.menu-panel .ic{width:30px;height:30px}.dock a span{white-space:nowrap;font-size:13px;letter-spacing:-.02em}}
+
+/* 2026-10-31 凱菲：選單四色太花 → 同色系整體美編，只有網路掛號獨立一塊；頁首已有名字，首頁科別行不再重複 */
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.menu-panel a,.menu-panel a:nth-child(4n+1),.menu-panel a:nth-child(4n+2),.menu-panel a:nth-child(4n+3),.menu-panel a:nth-child(4n+4){background:var(--wool);color:var(--ink)}
+.menu-panel a:hover{background:#fff;filter:none}
+.menu-panel a[aria-current]{box-shadow:inset 0 0 0 2px var(--moss)}
+.menu-panel .ic{background:var(--felt);color:var(--moss)}
+.menu-panel a.reg{background:var(--rose);color:#fff;margin-top:4px}
+.menu-panel a.reg .ic{background:rgba(255,255,255,.2);color:#fff}
