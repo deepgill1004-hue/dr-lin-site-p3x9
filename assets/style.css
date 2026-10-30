@@ -296,3 +296,58 @@ html.js .rv.in{opacity:1;transform:none}
 .hero2>.wrap{overflow:hidden}
 .hfig .cut{width:min(88%,500px)}
 .body{grid-template-columns:minmax(0,1fr)}
+
+/* ===== 10/29 第二輪：站內文章（卡片格、單篇閱讀頁、粉專導流框） ===== */
+.agrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:24px}
+.acard{background:var(--wool);border-radius:26px;overflow:hidden;text-decoration:none;display:grid;grid-template-rows:auto 1fr;transition:transform .2s}
+.acard:hover{transform:translateY(-3px)}
+.acard img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.acard .t{padding:18px 22px 24px;display:grid;gap:6px;align-content:start}
+.acard small{color:var(--rose);font-weight:700;font-size:14.5px}
+.acard h3{font-size:20px;line-height:1.5}
+.acard p{margin:0;color:var(--ink-2);font-size:15.5px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.acard:hover h3{color:var(--rose)}
+.acat{scroll-margin-top:96px}
+.chips.cats{margin-top:18px}
+.chips.cats a{font-size:16.5px;padding:8px 16px;min-height:44px;gap:8px}
+.chips.cats small{font-size:13px;opacity:.85;font-family:var(--sans,inherit)}
+.read{max-width:860px;padding-bottom:20px;display:grid;gap:28px}
+.post{margin-top:20px;font-size:18px;line-height:1.95}
+.post .who{color:var(--ink-2);font-size:15.5px;margin:0 0 10px}
+.post .who a{color:var(--rose);font-weight:700;text-decoration:none}
+.post h1{margin-bottom:12px}
+.post .dek{color:var(--ink-2);font-size:18.5px;margin:0 0 24px}
+.post h2{margin:34px 0 12px;font-size:25px}
+.post h3{margin:24px 0 8px}
+.hero-img{margin:0 0 26px;border-radius:22px;overflow:hidden}
+.hero-img img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.hero-img.tall img{aspect-ratio:4/5;object-position:50% 40%}
+.post .srcs{font-size:16px}
+.disclaim{margin-top:28px;padding-top:18px;border-top:2px dotted rgba(35,65,61,.18);color:var(--ink-2);font-size:15.5px}
+.fbbox{background:var(--ink);color:var(--wool);border-radius:var(--r-lg);padding:28px 34px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px 28px;align-items:center}
+.fbbox b{font-family:var(--round);font-weight:400;font-size:20px;line-height:1.55;display:block}
+.fbbox p{margin:8px 0 0;color:#d9e0d3}
+.fbbox .acts{display:flex;flex-wrap:wrap;gap:12px}
+.fbbox .btn.ghost{color:var(--wool);box-shadow:inset 0 0 0 2px var(--wool);background:transparent}
+.read>.tile.wide{background:var(--wool)}
+@media(max-width:760px){.fbbox{grid-template-columns:1fr;padding:24px 22px}.post{font-size:17px}}
+/* 分類區：一張主圖＋文字清單（不再每張卡重複同圖） */
+.acat{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:34px;align-items:start;margin-top:56px;scroll-margin-top:96px}
+.acat figure{margin:0;border-radius:var(--r-lg);overflow:hidden;position:sticky;top:110px}
+.acat figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.acat h2{display:flex;align-items:baseline;gap:12px;margin-bottom:6px}
+.acat h2 small{font-family:inherit;font-size:15px;color:var(--ink-2)}
+.alist{list-style:none;margin:0;padding:0}
+.alist li{border-bottom:2px dotted rgba(35,65,61,.18)}
+.alist li:last-child{border-bottom:0}
+.alist a{display:grid;grid-template-columns:4.6em minmax(0,1fr) auto;gap:16px;padding:18px 4px;text-decoration:none;align-items:start}
+.alist time{color:var(--ink-2);font-size:15px;font-variant-numeric:tabular-nums;padding-top:3px}
+.alist b{display:block;font-family:var(--round);font-weight:400;font-size:20px;line-height:1.5}
+.alist small{display:block;color:var(--ink-2);font-size:15.5px;margin-top:4px}
+.alist i{font-style:normal;color:var(--rose);font-size:20px;padding-top:2px;transition:transform .2s}
+.alist a:hover b{color:var(--rose)}.alist a:hover i{transform:translateX(4px)}
+.post h1{font-size:clamp(28px,3.4vw,38px)}
+@media(max-width:820px){.acat{grid-template-columns:1fr;gap:18px;margin-top:40px}.acat figure{position:static}.acat figure img{aspect-ratio:2/1}.alist a{grid-template-columns:minmax(0,1fr) auto}.alist time{grid-column:1/-1;padding:0}}
+.read{grid-template-columns:minmax(0,1fr)}
+.post{overflow-wrap:anywhere}
+.post .tw,.tw{max-width:100%;overflow-x:auto}
