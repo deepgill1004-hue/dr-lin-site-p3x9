@@ -351,3 +351,21 @@ html.js .rv.in{opacity:1;transform:none}
 .read{grid-template-columns:minmax(0,1fr)}
 .post{overflow-wrap:anywhere}
 .post .tw,.tw{max-width:100%;overflow-x:auto}
+/* 手機：人像改在版面流裡（不絕對定位），框隨人像長高，不會往上蓋到文字和按鈕 */
+@media(max-width:860px){
+ .hfig{min-height:0;height:auto;display:flex;justify-content:center;padding-top:28px;margin-inline:-18px}
+ .hfig .cut{position:relative;right:auto;bottom:auto;transform:none;width:min(78%,340px);z-index:1}
+ .hfig .disc{left:10%;right:10%;bottom:-14%}
+}
+
+/* mobile clean-up 2026-10-30 */
+.swipe{display:none}
+@media(max-width:640px){
+ .timeline{gap:14px}
+ .timeline span:empty{display:none}
+ .crumb li:nth-child(n+4){display:none}
+ .doc .answer{padding:22px 20px;border-radius:var(--r-md)}
+ .doc .answer p{font-size:17.5px}
+ .swipe{display:block;margin:0 0 6px;font-size:14px;color:var(--ink-2);text-align:right}
+}
+@media(max-width:640px){.timeline li{padding-left:14px;border-left:3px solid rgba(166,61,64,.28)}}
