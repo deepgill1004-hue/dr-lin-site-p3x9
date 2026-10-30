@@ -221,7 +221,8 @@ html.js .rv.in{opacity:1;transform:none}
 .hero2>.wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:24px;align-items:end;min-height:min(78vh,720px);padding-top:40px}
 .htxt{align-self:center;padding-bottom:40px}
 .where{font-size:17px;color:var(--ink-2);margin-bottom:14px}
-.hero2 h1{font-size:clamp(40px,5.4vw,72px);line-height:1.22;margin-bottom:22px}
+.hero2 .tag{font-family:var(--round);color:var(--ink);font-size:clamp(40px,5.4vw,72px);line-height:1.22;margin-bottom:22px}
+.hero2 h1.where{font-family:inherit;font-weight:700;font-size:17px;line-height:1.6;color:var(--ink-2);margin-bottom:14px}
 .intro{font-size:19.5px;color:var(--ink-2);max-width:32em}
 .hero2 .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
 .hfig{position:relative;align-self:end;height:100%;min-height:520px}
@@ -451,7 +452,7 @@ html.js .rv.in{opacity:1;transform:none}
 .series a:hover b{color:var(--rose)}
 .series li[aria-current] a:hover b{color:var(--wool)}
 .edu h2 .n,#cards h2 .n,#m-h .n{margin-right:12px;font-size:.8em}
-.kinds{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:18px}
+.kinds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}
 .kind{background:var(--wool);border-radius:var(--r-md);padding:24px 24px 20px}
 .kind h3{color:var(--rose);margin-bottom:8px}
 .kind ul{list-style:none;padding:0;margin:8px 0 0;display:grid}
@@ -472,3 +473,15 @@ html.js .rv.in{opacity:1;transform:none}
 .shelf{grid-template-columns:repeat(4,minmax(0,1fr))}
 @media(max-width:900px){.shelf{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:420px){.shelf li{padding:16px 14px 14px 20px}.shelf b{font-size:17px}}
+
+/* 2026-10-30 看診原則（人設） */
+.plist{list-style:none;padding:0;margin:16px 0 8px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;counter-reset:p}
+.plist li{background:var(--wool);border-radius:var(--r-md);padding:20px 22px;counter-increment:p}
+.plist li b{display:block;font-family:var(--round);font-weight:400;font-size:21px;color:var(--rose);margin-bottom:6px}
+.plist li b::before{content:counter(p) "　";color:var(--ink-2);font-size:16px}
+.plist li span{display:block;line-height:1.75}
+.principles-home .plist{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:860px){.plist,.principles-home .plist{grid-template-columns:1fr}}
+.clinic .areas{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;font-size:16px;margin:0}
+.clinic .areas span{background:rgba(246,243,236,.12);border-radius:999px;padding:4px 14px}
+.sec .plist li{background:var(--wool-2)}
