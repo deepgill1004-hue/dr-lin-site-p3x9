@@ -409,3 +409,4 @@ html.js .rv.in{opacity:1;transform:none}
 .xray summary{cursor:pointer;color:#f0b267;font-size:14.5px;padding:8px 0;list-style-position:inside}
 .xray details img{display:block;width:100%;max-width:520px;height:auto;margin:8px auto 6px;border-radius:10px}
 .edu video.v9{aspect-ratio:9/16;max-height:82vh;width:auto;max-width:100%;margin:0 auto;display:block}
+.xray>picture img{display:block;width:100%;height:auto;border-radius:12px}
