@@ -356,7 +356,7 @@ html.js .rv.in{opacity:1;transform:none}
 @media(max-width:860px){
  .hfig{min-height:0;height:auto;display:flex;justify-content:center;padding-top:28px;margin-inline:-18px}
  .hfig .cut{position:relative;right:auto;bottom:auto;transform:none;width:min(78%,340px);z-index:1}
- .hfig .disc{left:10%;right:10%;bottom:-14%}
+ .hfig .disc{left:50%;right:auto;width:min(80%,400px);transform:translateX(-50%);bottom:-14%}   /* 平板寬度時圓不能比人像大，否則往上蓋到文字 */
 }
 
 /* mobile clean-up 2026-10-30 */
