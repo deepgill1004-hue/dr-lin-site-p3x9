@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>粉專貼文素材｜萬聖節篇</title>
+<style>
+:root{--bg:#eef1ec;--paper:#fff;--ink:#1f2a24;--muted:#5d6b62;--line:#d5ddd6;--accent:#2f6b57;--chip:#f3f6f3}
+@media (prefers-color-scheme:dark){:root{--bg:#141a17;--paper:#1d2520;--ink:#e7eee9;--muted:#9aaaa0;--line:#33403a;--accent:#8cc9ad;--chip:#26302b;color-scheme:dark}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;font-size:16px;line-height:1.7}
+main{max-width:560px;margin:0 auto;padding:18px 16px 60px;display:grid;gap:14px}
+h1{font-size:21px;margin:0;line-height:1.4}
+.sub{color:var(--muted);font-size:14px;margin:0}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px;display:grid;gap:10px}
+.hd{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:700}
+.txt{white-space:pre-wrap;background:var(--chip);border-radius:8px;padding:12px;font-size:15px;word-break:break-word}
+button{font:inherit;font-size:14px;font-weight:700;border:0;background:var(--accent);color:var(--paper);border-radius:999px;padding:6px 16px;cursor:pointer}
+img{width:100%;border-radius:10px;display:block}
+ol{margin:0;padding-left:1.3em}
+a.b{display:inline-block;border:1px solid var(--accent);color:var(--accent);border-radius:8px;padding:6px 12px;text-decoration:none;font-size:14px;font-weight:700;margin-right:6px}
+.note{color:var(--muted);font-size:13px;margin:0}
+</style>
+</head>
+<body>
+<main>
+<h1>無導線心臟節律器，手照樣舉高高：萬聖節篇</h1>
+<p class="sub">粉專「一千個傷心的理由」貼文素材｜建議 10/31（六）晚上 8 點發</p>
+
+<div class="card">
+  <div class="hd">貼文圖片<span class="note">長按圖片存到相簿</span></div>
+  <img src="../img/s_halloween.jpg" alt="羊毛氈爺爺站在小板凳上舉高雙手掛萬聖節彩帶，戴巫師帽的小孫女在旁邊">
+</div>
+
+<div class="card">
+  <div class="hd">主文<button data-from="body">複製主文</button></div>
+  <div class="txt" id="body">#一千個傷心的理由
+
+今天就是萬聖節 🎃 大家忙著刻南瓜燈、想怎麼嚇朋友，可是門診裡有一群人最怕的是被自己的心臟嚇到：走著走著心跳突然慢下來，眼前一黑，差點站不穩。
+
+心跳慢到需要節律器，過去幾乎都是在胸前開一道 3 到 4 公分的傷口放電池，再拉導線進心臟。術後一段時間，那一側的手不能突然舉高過肩，胸口也摸得到一顆突起。
+
+無導線節律器差不多一顆膠囊大小，從大腿根部的靜脈送進心臟，胸前不用開刀，術後不用限制手臂活動，掛萬聖節彩帶時手舉高也沒關係。
+
+這張 X 光裡，心房和心室各放了一顆，合起來剛好是南瓜燈的一對眼睛。
+
+有三件事一定要講清楚：它一樣是進到心臟的手術，風險術前會說明；要依心跳慢的原因選對類型；健保目前是有條件給付，不符合條件就要自費。
+
+萬聖節要嚇人，交給南瓜燈和面具就好；心跳這件事，穩穩的就好。
+
+#無導線心臟節律器 #心跳過慢 #萬聖節</div>
+</div>
+
+<div class="card">
+  <div class="hd">第一則留言<button data-from="cm">複製留言</button></div>
+  <div class="txt" id="cm">完整說明（傳統和無導線節律器的差別、三件一定要知道的事）放在官網：
+https://deepgill1004-hue.github.io/dr-lin-site-p3x9/halloween-leadless.html</div>
+  <p class="note">連結放留言、不放主文，臉書比較不會降低觸及。</p>
+</div>
+
+<div class="card">
+  <div class="hd">發文三步驟</div>
+  <ol>
+    <li>存圖，打開粉專按「建立貼文」，放入圖片。</li>
+    <li>貼上主文，按發佈。</li>
+    <li>在自己的貼文下面留言，貼上第一則留言。</li>
+  </ol>
+  <div><a class="b" href="https://www.facebook.com/profile.php?id=100076227194299">打開粉專</a><a class="b" href="../halloween-leadless.html">看官網文章</a></div>
+</div>
+</main>
+<script>
+document.querySelectorAll("button[data-from]").forEach(function(b){
+  b.addEventListener("click",function(){
+    var el=document.getElementById(b.dataset.from),t=el.innerText,o=b.textContent;
+    var ok=function(){b.textContent="已複製";setTimeout(function(){b.textContent=o},1600)};
+    var sel=function(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="已選取，長按複製"};
+    try{navigator.clipboard.writeText(t).then(ok,sel)}catch(e){sel()}
+  });
+});
+</script>
+</body>
+</html>
