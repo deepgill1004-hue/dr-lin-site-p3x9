@@ -34,7 +34,7 @@
   <figure class="hero-img"><picture><source srcset="img/s_palpitations.webp" type="image/webp"><img src="img/s_palpitations.jpg" alt="羊毛氈插畫：心悸是什麼感覺？原因、哪些情況要馬上就醫" width="1536" height="1024" fetchpriority=high></picture></figure>
   
   <p>我在門診，很多病人來看診的主訴是心跳很大力、跳很快或漏了一拍，這就是心悸。心悸是指您對自己心跳的感覺變得比平常更強烈，單獨出現不一定代表心臟有病，要看有沒有合併胸痛、喘、頭暈或昏倒。</p>
-<h2>心悸是什麼感覺？</h2><button type="button" class="vchip" data-i="0" aria-pressed="false"><img src="img/doc_talk.webp" alt="" width="28" height="28"><b>聽林醫師講這段</b><small>約 20 秒</small></button>
+<h2>心悸是什麼感覺？</h2><figure class="vexp"><video src="media/explainers/palpitations_1.mp4" poster="media/explainers/palpitations_1.webp" muted loop playsinline preload="none" aria-label="示意動畫：心悸是您對心跳的感覺變強烈，可能是怦怦重重地跳、跳很快、像在撲動，或好像漏了一拍"></video></figure><button type="button" class="vchip" data-i="0" aria-pressed="false"><img src="img/doc_talk.webp" alt="" width="28" height="28"><b>聽林醫師講這段</b><small>約 20 秒</small></button>
 <p>心悸是指您對自己心跳的感覺變得比平常更強烈。平常我們不會注意到自己的心跳，心悸時卻能清楚感覺到，位置多半在胸口，也可能在喉嚨或脖子。病人形容的方式很多：怦怦重重地跳、跳得很快、像在撲動，或是漏了一拍。發生心悸時，心律可能正常，也可能不正常。</p>
 <p>病人若說心跳停了一拍或多跳一拍，常是心室早期收縮（多跳了一下）引起的；心室頻脈引起的心悸，通常是突然開始、突然停止，而且可能伴隨快昏倒或昏倒。突然開始又突然停止的心悸，就要靠心電圖確認是哪一種比較快的心律。這不代表所有心悸都是這兩種，大多數單純的心悸並不嚴重，但要靠心電圖才分得出來。所以我在門診會先請您描述：是規律還是不規律、是突然開始還是慢慢變快、持續多久、發作時在做什麼。這些細節比「有心悸」三個字更有用。心律不整的分類可以先看<a href="arrhythmia.html">心律不整症狀怎麼分</a>。</p>
 <h2>心悸會伴隨哪些症狀？哪些表示該來看診？</h2><button type="button" class="vchip" data-i="1" aria-pressed="false"><img src="img/doc_talk.webp" alt="" width="28" height="28"><b>聽林醫師講這段</b><small>約 19 秒</small></button>
@@ -128,7 +128,7 @@
 var C=JSON.parse(document.getElementById('vdata').textContent),d=document.querySelector('.vdoc'),f=d.querySelector('.vface'),
  b=d.querySelector('.vbub'),t=b.querySelector('.vt'),h=b.querySelector('.vhd b'),vid=f.querySelector('video'),a=new Audio(),cur=-1,ctx,an,buf,raf;
 a.preload='none';
-if(/[?&]face=chest/.test(location.search)||d.dataset.face==='chest'){d.classList.add('chest');f.querySelector('img').src='media/doc_talk_chest.webp';if(vid)vid.src='media/doc_talk_chest.mp4'}
+if(!/[?&]face=head/.test(location.search)){d.classList.add('chest');f.querySelector('img').src='media/doc_talk_chest.webp';if(vid)vid.src='media/doc_talk_chest.mp4'}
 function sents(s){return s.match(/[^。！？；]+[。！？；]?/g)||[s]}
 function show(i){cur=i;var c=C[i];h.textContent='林醫師講：'+c.h2;
  t.innerHTML=sents(c.text).map(function(x){return '<span>'+x.replace(/[<&]/g,'')+'</span>'}).join('');b.hidden=false;
@@ -150,7 +150,12 @@ document.querySelectorAll('.vchip').forEach(function(x){x.addEventListener('clic
 b.querySelector('.vx').addEventListener('click',function(){stop();b.hidden=true});
 b.querySelector('.vnext').addEventListener('click',function(){var i=(cur+1)%C.length;play(i);var c=document.querySelector('.vchip[data-i="'+i+'"]');if(c)c.scrollIntoView({behavior:'smooth',block:'center'})});
 b.querySelector('.vre').addEventListener('click',function(){a.currentTime=0;play(cur)});
-})();</script>
+})();</script><style>.vexp{margin:6px 0 14px;border-radius:18px;overflow:hidden;background:var(--felt);aspect-ratio:4/5;max-width:440px}
+.vexp video{display:block;width:100%;height:100%;object-fit:cover}
+@media(prefers-reduced-motion:reduce){.vexp video{pointer-events:none}}</style><script>(function(){var vs=document.querySelectorAll('.vexp video');if(!('IntersectionObserver' in window)){return}
+var io=new IntersectionObserver(function(es){es.forEach(function(x){var v=x.target;
+ if(x.isIntersecting&&!matchMedia('(prefers-reduced-motion: reduce)').matches){if(v.preload==='none')v.preload='auto';v.play().catch(function(){})}else{v.pause()}})},{threshold:.35});
+vs.forEach(function(v){io.observe(v)})})();</script>
 </main>
 <footer class="site-foot wrap">
  <div class="cols"><a href="about.html">關於我</a><a href="arrhythmia.html">心律不整</a><a href="cardiometabolic.html">心腎代謝</a><a href="articles.html">衛教文章</a><a href="media.html">媒體與影片</a><a href="publications.html">論文發表</a><a href="clinic.html">門診資訊</a><a href="https://www.facebook.com/profile.php?id=100076227194299" target="_blank" rel="noopener">粉絲專頁「一千個傷心的理由」</a></div>
