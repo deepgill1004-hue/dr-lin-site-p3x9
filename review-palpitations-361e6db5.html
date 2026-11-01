@@ -112,6 +112,10 @@
 @media(max-width:980px){.vdoc{bottom:calc(86px + env(safe-area-inset-bottom,0px))}}
 @media(max-width:520px){.vface{width:68px;height:68px}.vface img,.vface video{width:60px;height:60px}.vbub{font-size:14px}}
 @media(prefers-reduced-motion:reduce){.vface::before{transition:none}}
+.vdoc.chest .vface{width:92px;height:140px;border-radius:20px}
+.vdoc.chest .vface::before{border-radius:20px}
+.vdoc.chest .vface img,.vdoc.chest .vface video{inset:4px;width:84px;height:132px;border-radius:16px;object-position:50% 0}
+@media(max-width:520px){.vdoc.chest .vface{width:80px;height:122px}.vdoc.chest .vface img,.vdoc.chest .vface video{width:72px;height:114px}}
 </style>
 <div class="vdoc" aria-live="polite">
  <div class="vbub" hidden><div class="vhd"><b></b><button type="button" class="vx" aria-label="關閉">✕</button></div><p class="vt"></p>
@@ -124,6 +128,7 @@
 var C=JSON.parse(document.getElementById('vdata').textContent),d=document.querySelector('.vdoc'),f=d.querySelector('.vface'),
  b=d.querySelector('.vbub'),t=b.querySelector('.vt'),h=b.querySelector('.vhd b'),vid=f.querySelector('video'),a=new Audio(),cur=-1,ctx,an,buf,raf;
 a.preload='none';
+if(/[?&]face=chest/.test(location.search)||d.dataset.face==='chest'){d.classList.add('chest');f.querySelector('img').src='media/doc_talk_chest.webp';if(vid)vid.src='media/doc_talk_chest.mp4'}
 function sents(s){return s.match(/[^。！？；]+[。！？；]?/g)||[s]}
 function show(i){cur=i;var c=C[i];h.textContent='林醫師講：'+c.h2;
  t.innerHTML=sents(c.text).map(function(x){return '<span>'+x.replace(/[<&]/g,'')+'</span>'}).join('');b.hidden=false;
