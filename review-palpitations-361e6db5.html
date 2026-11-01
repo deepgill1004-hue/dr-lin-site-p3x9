@@ -34,7 +34,7 @@
   <figure class="hero-img"><picture><source srcset="img/s_palpitations.webp" type="image/webp"><img src="img/s_palpitations.jpg" alt="羊毛氈插畫：心悸是什麼感覺？原因、哪些情況要馬上就醫" width="1536" height="1024" fetchpriority=high></picture></figure>
   
   <p>我在門診，很多病人來看診的主訴是心跳很大力、跳很快或漏了一拍，這就是心悸。心悸是指對自己心跳的感覺變得比平常更強烈，單獨出現不一定代表心臟有病，要看有沒有合併胸痛、喘、頭暈或昏倒。</p>
-<h2>心悸是什麼感覺？</h2><figure class="vexp" data-h2="心悸是什麼感覺？"><video src="media/explainers/palpitations_1.mp4" poster="media/explainers/palpitations_1.webp" muted loop playsinline preload="none" aria-label="示意動畫：病人說心跳好大力、跳好快、好像漏了一拍；心悸是對心跳的感覺變強烈，心律可能正常也可能不正常，要靠心電圖才分得出來"></video><button type="button" class="vpip" data-src="audio/palpitations_1_mix.mp3" aria-pressed="false" aria-label="播放林醫師講解（約 26 秒）"><img src="media/doc_talk_chest.webp" alt="" loading="lazy"><video src="media/doc_talk_chest.mp4" muted loop playsinline preload="none" aria-hidden="true"></video><i></i></button></figure><p class="vcap">按右下角林醫師頭像聽講解。AI 合成語音朗讀本段重點，內容經林醫師審閱。</p>
+<h2>心悸是什麼感覺？</h2><figure class="vexp" data-h2="心悸是什麼感覺？" data-src="audio/palpitations_1_mix.mp3" data-sec="26"><video src="media/explainers/palpitations_1.mp4" poster="media/explainers/palpitations_1.webp" muted playsinline preload="none" aria-label="示意動畫：病人說心跳好大力、跳好快、好像漏了一拍；心悸是對心跳的感覺變強烈，心律可能正常也可能不正常，要靠心電圖才分得出來"></video><span class="vpip" aria-hidden="true"><img src="media/doc_talk_chest.webp" alt="" loading="lazy"><video src="media/doc_talk_chest.mp4" muted loop playsinline preload="none"></video></span><button type="button" class="vplay"></button></figure><p class="vcap">AI 合成語音朗讀本段重點，內容經林醫師審閱。</p>
 <p>心悸是指對自己心跳的感覺變得比平常更強烈。平常我們不會注意到自己的心跳，心悸時卻能清楚感覺到，位置多半在胸口，也可能在喉嚨或脖子。病人形容的方式很多：怦怦重重地跳、跳得很快、像在撲動，或是漏了一拍。發生心悸時，心律可能正常，也可能不正常。</p>
 <p>病人若說心跳停了一拍或多跳一拍，常是心室早期收縮（多跳了一下）引起的；心室頻脈引起的心悸，通常是突然開始、突然停止，而且可能伴隨快昏倒或昏倒。突然開始又突然停止的心悸，就要靠心電圖確認是哪一種比較快的心律。這不代表所有心悸都是這兩種，大多數單純的心悸並不嚴重，但要靠心電圖才分得出來。所以我在門診會先請病人描述：是規律還是不規律、是突然開始還是慢慢變快、持續多久、發作時在做什麼。這些細節比「有心悸」三個字更有用。心律不整的分類可以先看<a href="arrhythmia.html">心律不整症狀怎麼分</a>。</p>
 <h2>心悸會伴隨哪些症狀？哪些表示該來看診？</h2>
@@ -88,30 +88,38 @@
 </section>
 <style>.vexp{position:relative;margin:6px 0 4px;border-radius:18px;overflow:hidden;background:#0a1a33;aspect-ratio:4/5;max-width:440px}
 .vexp>video{display:block;width:100%;height:100%;object-fit:cover}
+.vexp::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(10,26,51,.05),rgba(10,26,51,.42));pointer-events:none;transition:opacity .25s}
+.vexp.on::after{opacity:0}
+.vplay{position:absolute;left:50%;top:50%;z-index:2;width:88px;height:88px;margin:-44px 0 0 -44px;padding:0;border:0;border-radius:50%;cursor:pointer;
+ background:var(--rose) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E") 57% 50%/38px no-repeat;box-shadow:0 0 0 9px rgba(247,249,252,.22),0 14px 32px -10px rgba(0,0,0,.7);transition:transform .15s,opacity .2s}
+.vplay:hover{transform:scale(1.06)}.vplay:focus-visible{outline:3px solid #f7f9fc;outline-offset:6px}
+.vexp.done .vplay{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12a8 8 0 1 0 2.6-5.9'/%3E%3Cpath d='M4 4v5h5'/%3E%3C/svg%3E");background-position:50% 50%;background-size:40px}
+.vexp.on .vplay{opacity:0;pointer-events:none}
+.vexp.on{cursor:pointer}
+@media(max-width:520px){.vplay{width:76px;height:76px;margin:-38px 0 0 -38px;background-size:32px}}
 .vcap{margin:0 0 16px;max-width:440px;font-size:12px;color:var(--ink-2)}
-.vpip{position:absolute;right:8px;bottom:8px;width:15%;min-width:50px;aspect-ratio:272/414;padding:0;border:2px solid rgba(247,249,252,.92);border-radius:11px;overflow:hidden;background:#dfe6ee;cursor:pointer;box-shadow:0 10px 24px -10px rgba(0,0,0,.75)}
+.vpip{position:absolute;right:8px;bottom:8px;z-index:1;width:15%;min-width:50px;aspect-ratio:272/414;border:2px solid rgba(247,249,252,.92);border-radius:11px;overflow:hidden;background:#dfe6ee;box-shadow:0 10px 24px -10px rgba(0,0,0,.75);pointer-events:none}
 .vpip img,.vpip video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0}
 .vpip video{opacity:0;transition:opacity .2s}
-.vexp.on .vpip video{opacity:1}
-.vpip i{position:absolute;right:4px;bottom:4px;width:22px;height:22px;border-radius:50%;border:2px solid #f7f9fc;background:var(--rose) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E") center/11px no-repeat}
-.vexp.on .vpip i{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M7 5h4v14H7zm6 0h4v14h-4z'/%3E%3C/svg%3E")}
-.vpip:focus-visible{outline:3px solid var(--rose);outline-offset:2px}</style><script>(function(){
-var figs=[].slice.call(document.querySelectorAll('.vexp')),a=new Audio(),cur=null,raf;a.preload='none';
-function vid(fg){return fg.querySelector(':scope>video')}
-function stop(){a.pause();cancelAnimationFrame(raf);if(!cur)return;var v=vid(cur),t=cur.querySelector('.vpip video');
- v.pause();v.loop=true;t.pause();cur.classList.remove('on','sync');cur.querySelector('.vpip').setAttribute('aria-pressed','false');cur=null}
-function tick(){var v=cur&&vid(cur);if(v&&!a.paused&&Math.abs(v.currentTime-a.currentTime)>.25){try{v.currentTime=a.currentTime}catch(e){}}if(!a.paused)raf=requestAnimationFrame(tick)}
-function play(fg){var p=fg.querySelector('.vpip');if(cur!==fg){stop();a.src=p.dataset.src}cur=fg;
- a.play().then(function(){var v=vid(fg),t=fg.querySelector('.vpip video');fg.classList.add('on','sync');p.setAttribute('aria-pressed','true');
-  v.loop=false;v.preload='auto';try{v.currentTime=a.currentTime}catch(e){}v.play().catch(function(){});t.preload='auto';t.play().catch(function(){});tick()}).catch(function(){})}
-a.addEventListener('ended',function(){var fg=cur;stop();if(fg){var v=vid(fg);try{v.currentTime=v.duration}catch(e){}}});
-figs.forEach(function(fg){var p=fg.querySelector('.vpip');if(!p)return;p.addEventListener('click',function(){
- if(cur===fg&&!a.paused){stop();return}play(fg);
- if(innerWidth<=520){var hd=document.querySelector('.site-head'),off=(hd?hd.getBoundingClientRect().bottom:0)+8;scrollTo({top:fg.getBoundingClientRect().top+scrollY-off,behavior:'smooth'})}})});
-if(!('IntersectionObserver' in window))return;
-var io=new IntersectionObserver(function(es){es.forEach(function(x){var v=x.target;if(v.parentNode.classList.contains('sync'))return;
- if(x.isIntersecting&&!matchMedia('(prefers-reduced-motion: reduce)').matches){if(v.preload==='none')v.preload='auto';v.play().catch(function(){})}else{v.pause()}})},{threshold:.35});
-figs.forEach(function(fg){io.observe(vid(fg))})})();</script>
+.vexp.on .vpip video{opacity:1}</style><script>(function(){
+var figs=[].slice.call(document.querySelectorAll('.vexp'));
+function P(fg){return {v:fg.querySelector(':scope>video'),t:fg.querySelector('.vpip video'),b:fg.querySelector('.vplay'),a:fg._a}}
+function label(fg){var b=P(fg).b,s=fg.dataset.sec?'（約 '+fg.dataset.sec+' 秒）':'';
+ b.setAttribute('aria-label',(fg.classList.contains('done')?'重播':'播放')+(fg.dataset.src?'林醫師講解':'動畫')+s)}
+function pause(fg){var p=P(fg);if(p.a)p.a.pause();p.v.pause();if(p.t)p.t.pause();fg.classList.remove('on');cancelAnimationFrame(fg._raf);label(fg)}
+function done(fg){pause(fg);fg.classList.add('done');var v=P(fg).v;try{v.currentTime=v.duration}catch(e){}label(fg)}
+function tick(fg){var p=P(fg);if(p.a&&!p.a.paused&&!p.v.seeking&&Math.abs(p.v.currentTime-p.a.currentTime)>.25){try{p.v.currentTime=p.a.currentTime}catch(e){}}
+ if(fg.classList.contains('on'))fg._raf=requestAnimationFrame(function(){tick(fg)})}
+function play(fg){figs.forEach(function(f){if(f!==fg&&f.classList.contains('on'))pause(f)});
+ if(fg.dataset.src&&!fg._a){fg._a=new Audio(fg.dataset.src);fg._a.addEventListener('ended',function(){done(fg)})}
+ var p=P(fg);if(fg.classList.contains('done')){fg.classList.remove('done');if(p.a)p.a.currentTime=0;p.v.currentTime=0}
+ p.v.preload='auto';(p.a?p.a.play():Promise.resolve()).then(function(){fg.classList.add('on');
+  if(p.a){try{p.v.currentTime=p.a.currentTime}catch(e){}}p.v.play().catch(function(){});if(p.t){p.t.preload='auto';p.t.play().catch(function(){})}tick(fg)}).catch(function(){})}
+figs.forEach(function(fg){var p=P(fg);p.v.loop=false;p.v.removeAttribute('autoplay');
+ p.v.addEventListener('ended',function(){if(!fg.dataset.src)done(fg)});
+ p.b.addEventListener('click',function(ev){ev.stopPropagation();play(fg);
+  if(innerWidth<=520){var hd=document.querySelector('.site-head'),off=(hd?hd.getBoundingClientRect().bottom:0)+8;scrollTo({top:fg.getBoundingClientRect().top+scrollY-off,behavior:'smooth'})}});
+ fg.addEventListener('click',function(){if(fg.classList.contains('on'))pause(fg)});label(fg)})})();</script>
 </main>
 <footer class="site-foot wrap">
  <div class="cols"><a href="about.html">關於我</a><a href="arrhythmia.html">心律不整</a><a href="cardiometabolic.html">心腎代謝</a><a href="articles.html">衛教文章</a><a href="media.html">媒體與影片</a><a href="publications.html">論文發表</a><a href="clinic.html">門診資訊</a><a href="https://www.facebook.com/profile.php?id=100076227194299" target="_blank" rel="noopener">粉絲專頁「一千個傷心的理由」</a></div>
