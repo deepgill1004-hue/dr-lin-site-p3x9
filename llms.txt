@@ -29,7 +29,7 @@
 - [心房顫動為什麼會中風？預防要從抗凝血與血壓管理開始](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/stroke-prevention-af.html): 心房顫動的人中風風險較高，預防要靠抗凝血、控制血壓與共病。內容包括怎麼辨識中風；臉歪、手無力、說話不清請立刻打 119 並記下時間。
 - [心房顫動電燒之後：會復發嗎？抗凝血劑、術後三個月與回診時機](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/pfa-aftercare.html): 不論哪一種能量的心房顫動電燒，術後抗凝血劑至少吃兩個月；三個月內偶有心律不整不代表失敗。內容包括術後注意事項、復發怎麼評估與何時要回診。
 - [心房顫動電燒怎麼選？脈衝場、冷凍、射頻的判斷重點](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/pfa-choose.html): 沒有哪一種電燒適合所有人。內容包括選脈衝場、冷凍或射頻，要看心房顫動型態、心臟構造、是否第二次電燒、設備與醫師經驗，以及健保自付差額。
-- [心絞痛和心肌梗塞的警訊有哪些？什麼時候要去急診](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/angina-myocardial-infarction-warning.html): 活動時胸悶或痛到下巴、左肩，要儘快看心臟內科；胸痛持續、休息沒緩解又冒冷汗，請立刻打 119。內容包括心絞痛與心肌梗塞的警訊與去急診的時機。
+- [心絞痛和心肌梗塞的警訊有哪些？什麼時候要去急診](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/angina-myocardial-infarction-warning.html): 活動時胸悶或痛到下巴、左肩，要儘快看心臟內科；胸痛持續、休息沒緩解就要立刻打 119，合併冒冷汗更不能等。內容包括心絞痛與心肌梗塞的警訊與去急診的時機。
 - [心腎症候群是什麼？心臟和腎臟互相拖累時怎麼辦](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/cardiorenal-syndrome.html): 心腎症候群是心臟和腎臟互相拖累的惡性循環，早期常沒症狀。新竹馬偕林柏霖醫師參與撰寫 2026 台灣專家共識，說明檢查、治療大方向與日常管理。
 - [心臟去顫器（ICD）誰需要裝？心室頻脈、心室顫動會猝死嗎](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/ventricular-arrhythmia-icd.html): 心室頻脈、心室顫動是心因性猝死的直接原因，高危險群可能需要植入式心臟去顫器（ICD）。內容包括警訊症狀、健保給付條件，以及旁人怎麼 CPR 加 AED。
 - [心跳太慢（心跳過慢）怎麼辦？心臟節律器怎麼選](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/pacemaker-choice.html): 心跳太慢若由藥物或電解質造成，常可逆轉；持續太慢又頭暈、喘或血壓不穩，才考慮裝節律器。內容包括有導線與無導線怎麼和醫師討論、怎麼選。

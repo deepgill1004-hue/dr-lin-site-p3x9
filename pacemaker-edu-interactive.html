@@ -1266,7 +1266,6 @@ S.close = { ib: 4, vb: 4, build(L, t) {
 /* ---------- stage & runtime ---------- */
 const ORDER_I = ['cover', 'c1', 's1', 'pm', 's2', 't3', 'a2', 't5', 'sz', 's4', 's5', 's5b', 'a3', 'a1', 'b1', 'b2', 'cmp', 'close'];   
 // [scene, startBeat, beats] @80 BPM (0.75 s/beat). Each card stays >= max(5 s, chars/3 + 2 s) and every animation ends with a hold.
-// 2026-10-12 配音：每幕長度＝max(原本拍數, 講解長度換算的拍數)；EDU_BEATS 由 tts.mjs 算出、build.mjs 注入
 const VID = (() => { const NB = window.EDU_BEATS || {}; const L = [['cover', 16], ['c1', 16], ['s1', 18], ['pm', 18], ['s2', 14], ['t3', 18], ['a2', 18], ['t5', 16], ['sz', 20], ['s4', 14], ['s5', 16], ['s5b', 16], ['a3', 18], ['a1', 16], ['b1', 16], ['b2', 22], ['cmp', 22], ['close', 18]]; let t = 0; return L.map(([id, n0]) => { const n = Math.max(n0, NB[id] || 0); const v = [id, t, n]; t += n; return v; }); })();
 const SFX = (() => {
   const o = {};
