@@ -35,7 +35,8 @@
   <script>if(matchMedia("(max-width:640px)").matches)document.querySelectorAll("video[data-v]").forEach(function(v){v.poster=v.dataset.vp;v.querySelector("source").src=v.dataset.v;v.classList.add("v9");v.load()})</script>
   <script>document.querySelectorAll('.pv:not([data-r])').forEach(function(w){w.dataset.r=1;var v=w.querySelector('video'),b=w.querySelector('.pvplay');
 v.controls=false;function go(){v.controls=true;v.play()}b.addEventListener('click',go);v.addEventListener('click',function(){if(!v.controls)go()});
-v.addEventListener('play',function(){w.classList.add('on')});function sync(){if(v.paused&&!v.seeking)w.classList.remove('on')}v.addEventListener('pause',sync);v.addEventListener('seeked',sync);
+v.addEventListener('play',function(){w.classList.add('on')});var d=0,t;function sync(){clearTimeout(t);t=setTimeout(function(){if(v.paused&&!v.seeking&&!d)w.classList.remove('on')},250)}v.addEventListener('pause',sync);v.addEventListener('seeked',sync);
+v.addEventListener('pointerdown',function(){d=1});function up(){if(d){d=0;sync()}}window.addEventListener('pointerup',up);window.addEventListener('pointercancel',up);
 v.addEventListener('ended',function(){w.classList.remove('on')})})</script>
   <p class="acts"><a class="btn" href="pacemaker-edu-interactive.html">想自己控制速度：一幕一幕慢慢看</a></p></section>
  <section class="sec block" id="cards" aria-labelledby="c-h"><h2 id="c-h"><span class="n">02</span>三張圖解，一次看一個問題</h2>

@@ -36,7 +36,8 @@
   <p>脈衝場消融（PFA）是心房顫動電燒的一種做法：不加熱、不冷凍，而是用極短時間的高電壓電脈衝，讓異常的心肌細胞失去功能。它和射頻、冷凍電燒的目標一樣，都是在肺靜脈周圍做出一圈隔離，差別在用什麼能量、怎麼做出那一圈。</p>
 <h2>脈衝場消融是什麼？和以前的電燒差在哪？</h2><figure class="evid"><div class="pv"><video controls playsinline preload="none" poster="media/videos/pfa-what.jpg" width="1080" height="1350" aria-label="脈衝場消融和射頻、冷凍電燒差在哪"><source src="media/videos/pfa-what.mp4" type="video/mp4">您的瀏覽器無法播放影片。</video><button type="button" class="pvplay" aria-label="播放影片"></button></div><figcaption>約 1 分鐘的動畫，看電燒怎麼把亂電圈起來，三種能量又差在哪。</figcaption></figure><script>document.querySelectorAll('.pv:not([data-r])').forEach(function(w){w.dataset.r=1;var v=w.querySelector('video'),b=w.querySelector('.pvplay');
 v.controls=false;function go(){v.controls=true;v.play()}b.addEventListener('click',go);v.addEventListener('click',function(){if(!v.controls)go()});
-v.addEventListener('play',function(){w.classList.add('on')});function sync(){if(v.paused&&!v.seeking)w.classList.remove('on')}v.addEventListener('pause',sync);v.addEventListener('seeked',sync);
+v.addEventListener('play',function(){w.classList.add('on')});var d=0,t;function sync(){clearTimeout(t);t=setTimeout(function(){if(v.paused&&!v.seeking&&!d)w.classList.remove('on')},250)}v.addEventListener('pause',sync);v.addEventListener('seeked',sync);
+v.addEventListener('pointerdown',function(){d=1});function up(){if(d){d=0;sync()}}window.addEventListener('pointerup',up);window.addEventListener('pointercancel',up);
 v.addEventListener('ended',function(){w.classList.remove('on')})})</script>
 <p>心房顫動的亂電，病灶大多在肺靜脈開口附近。電燒就是把這個地方圍起來，讓亂電傳不進心房，這個步驟叫「肺靜脈隔離」。</p>
 <p>三種電燒方式的差別，在於用什麼能量把這一圈做出來。射頻是導管尖端加熱，一點一點燒，連成一圈。冷凍是把氣球頂在肺靜脈開口，用低溫凍出一圈。脈衝場則是在極短的時間內放出高電壓電脈衝，用電場在細胞膜上打出無法修復的小孔，細胞因此失去功能，這叫「不可逆電穿孔」。不同組織對電場的敏感度不一樣，心肌細胞比較敏感，這是它被認為對周邊組織比較友善的原因。</p>
