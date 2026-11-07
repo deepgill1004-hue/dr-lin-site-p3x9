@@ -516,3 +516,6 @@ html.js .rv.in{opacity:1;transform:none}
 .menu-panel .ic{background:var(--felt);color:var(--moss)}
 .menu-panel a.reg{background:var(--rose);color:#fff;margin-top:4px}
 .menu-panel a.reg .ic{background:rgba(255,255,255,.2);color:#fff}
+.evid{margin:10px auto 22px;max-width:460px}
+.evid video{display:block;width:100%;height:auto;border-radius:18px;background:var(--ink)}
+.evid figcaption{margin-top:8px;font-size:15px;line-height:1.6;color:var(--ink);opacity:.78}
