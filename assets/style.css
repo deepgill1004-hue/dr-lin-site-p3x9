@@ -519,3 +519,9 @@ html.js .rv.in{opacity:1;transform:none}
 .evid{margin:10px auto 22px;max-width:460px}
 .evid video{display:block;width:100%;height:auto;border-radius:18px;background:var(--ink)}
 .evid figcaption{margin-top:8px;font-size:15px;line-height:1.6;color:var(--ink);opacity:.78}
+.pv{position:relative;line-height:0}
+.pvplay{position:absolute;left:50%;top:50%;z-index:2;width:88px;height:88px;margin:-44px 0 0 -44px;padding:0;border:0;border-radius:50%;cursor:pointer;background:var(--rose) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E") 57% 50%/38px no-repeat;box-shadow:0 0 0 9px rgba(247,249,252,.3),0 14px 32px -10px rgba(0,0,0,.6);transition:transform .15s,opacity .2s}
+.pvplay:hover{transform:scale(1.06)}
+.pvplay:focus-visible{outline:3px solid #f7f9fc;outline-offset:6px}
+.pv.on .pvplay{opacity:0;pointer-events:none}
+@media(max-width:520px){.pvplay{width:76px;height:76px;margin:-38px 0 0 -38px;background-size:32px}}
