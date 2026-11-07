@@ -1,0 +1,48 @@
+# 林柏霖醫師｜新竹馬偕紀念醫院心臟內科
+
+> 新竹馬偕紀念醫院心臟內科林柏霖醫師的衛教網站，內容涵蓋心律不整、心房顫動電燒、心臟節律器與心血管代謝疾病。內容為衛教資訊，不能取代門診評估。
+
+## 主題館與門診
+
+- [心律不整症狀怎麼分？心跳太慢、亂跳、太快，先分清楚是哪一種](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/arrhythmia.html): 心律不整的症狀有太慢、亂跳、太快三種，要先用心電圖抓到發作時的樣子。內容包括心房顫動電燒、無導線心臟節律器與心臟去顫器專區。
+- [心房顫動電燒是什麼？](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/af-ablation.html): 心房顫動電燒（導管消融）是用導管在肺靜脈開口做一圈隔離，讓亂電傳不進心房。內容包括誰適合、手術流程、風險、術後三個月與健保自付差額。
+- [林柏霖醫師的媒體採訪與影片](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/media.html): 林柏霖醫師（新竹馬偕心臟內科）的受訪與衛教影片整理：心房顫動冷凍消融、無導線心臟節律器、高血壓導管治療；本頁只列媒體、主題與日期，內容請看原報導。
+- [林柏霖醫師的心臟衛教文章](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/articles.html): 新竹馬偕心臟內科林柏霖醫師的衛教文章總覽：心房顫動電燒、脈衝場消融、無導線心臟節律器、心跳過慢，以及高血壓、血脂、心腎症候群與中風預防，依主題分類。
+- [林柏霖醫師的論文發表](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/publications.html): 林柏霖醫師（新竹馬偕心臟內科）PubMed 收錄論文 42 篇，依心房顫動、電生理與節律、心衰竭、冠心病與血脂、台灣學會指引分類；為學術紀錄，非療效宣傳。
+- [林柏霖醫師門診時間（新竹馬偕心臟內科）](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/clinic.html): 林柏霖醫師新竹馬偕心臟內科門診：週二下午、週三上午、週四上午與週四夜診，診間 4，新竹、竹北、竹東、竹南、頭份、苗栗、桃園就近可掛。附網路掛號、看診前要準備什麼，以及哪些情況不要等門診、請立刻就醫。
+- [林柏霖醫師｜新竹馬偕紀念醫院心臟內科・心臟電生理專科](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/): 林柏霖醫師是新竹馬偕紀念醫院心臟內科資深主治醫師，專精心臟電生理：心房顫動電燒、脈衝場消融、無導線心臟節律器，服務桃竹苗（新竹、竹北、竹東、湖口、竹南、頭份、苗栗、桃園）。含白話衛教、門診時間與網路掛號。
+- [無導線心臟節律器是什麼？心房型、心室型、雙腔怎麼選](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/leadless-pacemaker.html): 無導線心臟節律器（又稱無導線心律調節器）約膠囊大小，經大腿靜脈放進右心室，胸前沒有傷口與導線。內容包括適合誰、與傳統節律器差別、電池與核磁共振，以及健保有條件給付。
+- [節律器衛教專區](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/pacemaker-edu.html): 給心跳太慢、要裝節律器的病人與家屬：5 分鐘動畫影片、可一幕一幕看的互動版與三張圖解，看懂有導線與無導線的差別。新竹馬偕林柏霖醫師衛教專區。
+- [脈衝場消融術（PFA）專題：六個問題一次看懂](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/pfa.html): 脈衝場消融術（PFA）是不加熱、不冷凍的心房顫動電燒新做法。新竹馬偕林柏霖醫師把它拆成六問：是什麼、為何熱門、研究怎麼說、怎麼選、健保自付差額、術後。
+- [關於林柏霖醫師](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/about.html): 林柏霖醫師，新竹馬偕心臟內科資深主治醫師，具心臟電生理暨介入治療專科醫師證照；專精心房顫動電燒、無導線心臟節律器，就近服務新竹、竹北、苗栗與桃園的病人。本頁列學經歷、學會職務與衛教活動。
+- [高血壓、肥胖與心腎症候群：心腎代謝專區](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/cardiometabolic.html): 林柏霖醫師（新竹馬偕心臟內科）整理高血壓、肥胖、血脂與心腎症候群衛教，並參與撰寫 2026 台灣心腎症候群專家共識；血壓、體重和腎臟都會拖累心臟。
+
+## 衛教文章
+
+- [RSV 不只是感冒：60 歲以上與心臟病患者要注意什麼](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/rsv-heart-vaccine.html): 60 歲以上或有心臟病的人感染 RSV，可能出現嚴重肺炎與心血管併發症。內容包括疫苗的效果、副作用、台灣目前建議，以及可和醫師討論的自費接種。
+- [吃保健食品能預防心臟病嗎？維他命和茶的證據](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/heart-disease-supplements.html): 研究顯示補充維他命 D、E 無法降低心血管風險，維他命 C 與綜合維他命也缺乏足夠的好處證據。內容包括喝茶與保健食品的使用提醒。
+- [在家怎麼量血壓才準？722 原則與量測步驟](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/home-blood-pressure-measure.html): 在家量血壓選較高那隻手、量前 30 分鐘不喝咖啡茶並先排尿、坐著休息 5 分鐘，依 722 原則連量 7 天。新竹馬偕林柏霖醫師教您量測與記錄。
+- [壞膽固醇多少要吃藥？瘦的人也會高血脂嗎](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/high-cholesterol-statin-when.html): 壞膽固醇要不要吃藥，不是只看 LDL 一個數字，而是看整體心血管風險；不胖也可能血脂異常。內容包括什麼情況需要藥物、日常怎麼做。
+- [天冷、換季、過年，心臟要注意什麼](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/cold-weather-heart-care.html): 氣溫驟降時血管收縮、血壓升高，心肌梗塞與中風風險增加。新竹馬偕林柏霖醫師提醒三高與心臟衰竭的人天冷時保暖、按時服藥、量血壓，過年大吃大喝也別忘了吃藥。
+- [心房型無導線心臟節律器是什麼？病竇症候群適合嗎、和心室型、雙腔系統差在哪](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/leadless-atrial.html): 心房型無導線心臟節律器：直接放進右心房、沒有導線和胸前口袋。病竇症候群為什麼要照顧心房、研究收的是哪些人，和心室型、雙腔系統差在哪，以及健保條文怎麼寫。
+- [心房顫動是什麼？症狀與治療一次看懂](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/af-symptoms-treatment.html): 心房顫動是心房不規律快速亂跳的心律不整，重點是預防中風。內容包括症狀、怎麼發現，以及藥物、電擊與電燒怎麼選，並說明什麼時候要就醫。
+- [心房顫動為什麼會中風？預防要從抗凝血與血壓管理開始](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/stroke-prevention-af.html): 心房顫動的人中風風險較高，預防要靠抗凝血、控制血壓與共病。內容包括怎麼辨識中風；臉歪、手無力、說話不清請立刻打 119 並記下時間。
+- [心房顫動電燒之後：會復發嗎？抗凝血劑、術後三個月與回診時機](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/pfa-aftercare.html): 不論哪一種能量的心房顫動電燒，術後抗凝血劑至少吃兩個月；三個月內偶有心律不整不代表失敗。內容包括術後注意事項、復發怎麼評估與何時要回診。
+- [心房顫動電燒怎麼選？脈衝場、冷凍、射頻的判斷重點](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/pfa-choose.html): 沒有哪一種電燒適合所有人。內容包括選脈衝場、冷凍或射頻，要看心房顫動型態、心臟構造、是否第二次電燒、設備與醫師經驗，以及健保自付差額。
+- [心絞痛和心肌梗塞的警訊有哪些？什麼時候要去急診](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/angina-myocardial-infarction-warning.html): 活動時胸悶或痛到下巴、左肩，要儘快看心臟內科；胸痛持續、休息沒緩解又冒冷汗，請立刻打 119。內容包括心絞痛與心肌梗塞的警訊與去急診的時機。
+- [心腎症候群是什麼？心臟和腎臟互相拖累時怎麼辦](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/cardiorenal-syndrome.html): 心腎症候群是心臟和腎臟互相拖累的惡性循環，早期常沒症狀。新竹馬偕林柏霖醫師參與撰寫 2026 台灣專家共識，說明檢查、治療大方向與日常管理。
+- [心臟去顫器（ICD）誰需要裝？心室頻脈、心室顫動會猝死嗎](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/ventricular-arrhythmia-icd.html): 心室頻脈、心室顫動是心因性猝死的直接原因，高危險群可能需要植入式心臟去顫器（ICD）。內容包括警訊症狀、健保給付條件，以及旁人怎麼 CPR 加 AED。
+- [心跳太慢（心跳過慢）怎麼辦？心臟節律器怎麼選](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/pacemaker-choice.html): 心跳太慢若由藥物或電解質造成，常可逆轉；持續太慢又頭暈、喘或血壓不穩，才考慮裝節律器。內容包括有導線與無導線怎麼和醫師討論、怎麼選。
+- [為什麼這兩年大家都在談脈衝場消融？2026 年的趨勢](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/pfa-trend.html): 歐洲心律醫學會調查中，受訪者表示脈衝場消融已用在約一半的初次心房顫動電燒。內容包括 2026 年科學聲明與持續性、再次電燒的限制。
+- [無導線心臟節律器手術怎麼做？術前準備、手術過程、住院天數與傷口照顧](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/leadless-procedure.html): 無導線心臟節律器手術從大腿根部靜脈放入導管，送進心臟固定，胸前不開刀。說明手術前準備、手術每一步、風險、住院天數與傷口照顧，以及各院做法不同之處。
+- [無導線心臟節律器，手照樣舉高高：萬聖節篇](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/halloween-leadless.html): 無導線心臟節律器（又稱無導線心律調節器）沒有胸前傷口與導線，術後不用限制手臂活動。用萬聖節場景，說清它和傳統節律器在穿衣、背包、舉手上的差別與三件一定要知道的事。
+- [糖尿病會傷心臟嗎？血糖、血壓、血脂要一起管](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/diabetes-heart-risk.html): 糖尿病會明顯提高心血管疾病風險，所以除了血糖，血壓、血脂和體重也要一起管。內容包括新一代降血糖藥的心血管保護證據與日常要做的事。
+- [肥胖和心臟有什麼關係？減重對心血管的好處](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/obesity-weight-loss-heart.html): 肥胖是慢性疾病，與高血壓、心臟衰竭、心房顫動和糖尿病有關。內容包括減重對心臟的好處，以及體重控制藥物只是部分人的工具、要由醫師評估。
+- [脈衝場消融健保怎麼給付？自付差額規定一次看懂](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/pfa-nhi.html): 脈衝場消融術的導管，2025 年 12 月 1 日起列為健保自付差額特材，只限用於心房顫動的肺靜脈隔離，術前須說明並簽同意書。
+- [脈衝場消融的效果和風險：研究怎麼說](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/pfa-evidence.html): 隨機試驗顯示，脈衝場消融術在陣發性心房顫動的效果不比傳統熱能電燒差，但有冠狀動脈痙攣、溶血等自己的風險。內容包括目前的證據與限制。
+- [脈衝場消融（PFA）是什麼？和射頻、冷凍電燒差在哪](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/pfa-what.html): 脈衝場消融術（PFA）是不加熱、不冷凍，用極短時間的高電壓電脈衝處理異常心肌的心房顫動電燒。內容包括它和射頻、冷凍電燒的目標與差別。
+- [腳水腫、體重增加、容易喘，是心臟衰竭嗎](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/heart-failure-edema-weight.html): 腳水腫、體重莫名增加、比同年紀的人容易喘，不一定是腎臟問題，也可能是心臟衰竭，常要靠心臟超音波等檢查判斷。內容包括該看心臟內科的時機與天冷時的注意事項。
+- [裝無導線心臟節律器後，可以做核磁共振、過安檢嗎？生活注意事項](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/leadless-life.html): 裝無導線心臟節律器後，核磁共振、機場安檢、手機與家電距離、運動、開車與回診要注意什麼，哪些是通用節律器建議、哪些各院規定不同，附國內外來源。
+- [頑固型高血壓怎麼辦？腎動脈交感神經電燒是什麼](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/renal-denervation-resistant-hypertension.html): 頑固型高血壓是吃多種降壓藥仍降不下來；腎動脈交感神經電燒用導管降低腎動脈周圍的交感神經活性，要經團隊評估。內容包括適用條件、做法與效果。
+- [高血壓可以運動嗎？血壓多高要先控制](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/hypertension-exercise.html): 高血壓可以運動，規律運動本身就是降壓的一部分；但靜態收縮壓大於 160 mmHg 時，先控制血壓再做高強度運動。內容包括運動量與警訊。
+- [高血壓標準值是多少？130/80 要吃藥嗎](https://deepgill1004-hue.github.io/dr-lin-site-p3x9/hypertension-standard-target.html): 2022 年台灣高血壓指引以居家血壓平均 130/80 mmHg 以上診斷高血壓，一般目標低於 130/80。內容包括血壓藥為什麼要吃、診間血壓為什麼不夠準。
