@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>心跳怪怪的？1 分鐘小檢查｜林柏霖醫師</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+<style>
+/* 林醫師網站同一組色（site/assets/style.css）＋貼紙：粗框、實心錯位陰影、微歪 */
+:root{--wool:#f6f3ec;--wool-2:#ece6d8;--felt:#dfe4d5;--ink:#23413d;--ink-2:#4a605c;--moss:#4b7368;--mustard:#d6a13d;--rose:#a3444b;--rose-2:#f3dcdc;
+  --round:"Huninn","Noto Sans TC","PingFang TC",sans-serif;--sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--wool);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.7;
+  background-image:radial-gradient(rgba(35,65,61,.05) 1px,transparent 1.2px);background-size:7px 7px}
+.app{max-width:520px;margin:0 auto;padding:18px 16px 48px;min-height:100vh}
+.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.brand{font-family:var(--round);font-size:15px;color:var(--ink-2);text-decoration:none}
+.snd{width:42px;height:42px;border-radius:50%;border:2px solid var(--ink);background:#fff;box-shadow:2px 2px 0 var(--ink);font-size:19px;cursor:pointer;color:var(--ink)}
+/* 毛線進度：一條線＋珠子 */
+.yarn{position:relative;height:26px;margin:4px 10px 6px}
+.yarn:before{content:"";position:absolute;left:0;right:0;top:12px;border-top:3px dashed var(--wool-2)}
+.yarn .done{position:absolute;left:0;top:11px;height:5px;border-radius:5px;background:var(--mustard);transition:width .5s cubic-bezier(.3,1.4,.5,1)}
+.bead{position:absolute;top:5px;width:18px;height:18px;margin-left:-9px;border-radius:50%;background:#fff;border:2px solid var(--ink);transition:background .3s,transform .3s}
+.bead.on{background:var(--rose);transform:scale(1.15)}
+.count{font-family:var(--round);font-size:14px;color:var(--ink-2);text-align:right;margin:0 2px 12px;min-height:20px}
+.screen{display:none;animation:in .45s cubic-bezier(.2,1.3,.4,1)}
+.screen.show{display:block}
+@keyframes in{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
+.sticker{display:inline-block;background:#fff;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);border-radius:14px;padding:8px 16px;
+  font-family:var(--round);font-size:26px;line-height:1.35;transform:rotate(-1.3deg);margin:0 0 10px}
+.sticker.alt{transform:rotate(1deg);background:var(--rose-2)}
+.photo{width:100%;aspect-ratio:3/2;object-fit:cover;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);border-radius:20px;display:block;margin:6px 0 16px;background:var(--felt)}
+.photo.sm{aspect-ratio:2/1;margin-top:0;transform:rotate(.6deg)}
+.lead{margin:0 0 16px;color:var(--ink-2)}
+.q{font-family:var(--round);font-size:22px;line-height:1.45;margin:4px 0 6px}
+.hint{font-size:15px;color:var(--ink-2);margin:0 0 14px}
+.opts{display:grid;gap:10px;margin-bottom:18px}
+.opts.two{grid-template-columns:1fr 1fr}
+.opt{display:flex;align-items:center;gap:10px;text-align:left;width:100%;font:inherit;font-size:17px;line-height:1.5;color:var(--ink);cursor:pointer;
+  background:#fff;border:2px solid var(--ink);border-radius:16px;padding:12px 14px;box-shadow:3px 3px 0 var(--ink);transition:transform .08s,box-shadow .08s,background .2s}
+.opt:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--ink)}
+.opt .dot{flex:none;width:22px;height:22px;border-radius:50%;border:2px solid var(--ink);background:var(--wool);transition:background .2s}
+.opt.on{background:var(--rose-2)}
+.opt.on .dot{background:var(--rose);box-shadow:inset 0 0 0 3px #fff}
+.opt.pic{flex-direction:column;align-items:stretch;padding:8px;gap:6px;text-align:center}
+.opt.pic img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;border:2px solid var(--ink)}
+.opt.none{background:var(--felt)}
+.opt.none.on{background:var(--felt)}
+.btn{display:block;width:100%;text-align:center;text-decoration:none;font:inherit;font-family:var(--round);font-size:20px;cursor:pointer;border:2px solid var(--ink);border-radius:999px;padding:12px 18px;
+  background:var(--mustard);color:var(--ink);box-shadow:3px 3px 0 var(--ink);transition:transform .08s,box-shadow .08s}
+.btn:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--ink)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.btn.ghost{background:#fff;margin-top:10px}
+.btn.back{background:transparent;border:0;box-shadow:none;font-size:16px;color:var(--ink-2);margin-top:6px;padding:6px}
+.result{border:2px solid var(--ink);border-radius:22px;box-shadow:4px 4px 0 var(--ink);padding:18px;margin:6px 0 16px;background:#fff}
+.result.red{background:#fbe3e1}.result.orange{background:#fbefd8}.result.green{background:#e6efe2}
+.badge{display:inline-block;font-family:var(--round);font-size:15px;border:2px solid var(--ink);border-radius:999px;padding:2px 12px;background:#fff;margin-bottom:8px;transform:rotate(-2deg)}
+.result h2{font-family:var(--round);font-size:24px;line-height:1.4;margin:0 0 8px;font-weight:400}
+.result p{margin:0 0 8px}
+.call{display:block;text-align:center;text-decoration:none;font-family:var(--round);font-size:24px;color:#fff;background:var(--rose);border:2px solid var(--ink);border-radius:999px;padding:12px;box-shadow:3px 3px 0 var(--ink);margin:10px 0 4px}
+.box{border:2px dashed var(--ink-2);border-radius:18px;padding:14px 16px;margin:0 0 16px;background:var(--wool)}
+.box h3{font-family:var(--round);font-weight:400;font-size:19px;margin:0 0 6px}
+.box ol,.box ul{margin:0;padding-left:22px}
+.note{background:#fffdf6;border:2px solid var(--ink);border-radius:18px;box-shadow:4px 4px 0 var(--ink);padding:16px;margin:0 0 16px;transform:rotate(-.6deg);
+  background-image:repeating-linear-gradient(transparent 0 33px,rgba(75,115,104,.18) 33px 34px)}
+.note h3{font-family:var(--round);font-weight:400;font-size:20px;margin:0 0 8px}
+.note dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:2px 12px;line-height:34px}
+.note dt{color:var(--ink-2);font-size:15px}
+.note dd{margin:0;font-size:16px}
+.note .blank{border-bottom:2px dotted var(--ink-2);display:inline-block;min-width:150px}
+.read{display:flex;gap:12px;align-items:center;text-decoration:none;color:var(--ink);border:2px solid var(--ink);border-radius:16px;padding:10px;background:#fff;box-shadow:3px 3px 0 var(--ink);margin-bottom:16px}
+.read img{width:84px;height:64px;object-fit:cover;border-radius:10px;border:2px solid var(--ink)}
+.read small{display:block;color:var(--ink-2)}
+.fine{font-size:13px;color:var(--ink-2);margin-top:18px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;font-family:var(--round);padding:8px 18px;border-radius:999px;opacity:0;transition:opacity .3s;pointer-events:none}
+.toast.show{opacity:1}
+.wiggle{animation:wig .4s}
+@keyframes wig{25%{transform:rotate(-2deg)}75%{transform:rotate(2deg)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="top"><a class="brand" href="index.html">← 林柏霖醫師｜心臟內科衛教</a><button class="snd" id="snd" aria-label="音效開關">♪</button></div>
+  <div class="yarn" id="yarn" aria-hidden="true"><div class="done" id="done"></div></div>
+  <div class="count" id="count"></div>
+
+  <!-- 0 開場 -->
+  <section class="screen show" data-step="0">
+    <div class="sticker">心跳怪怪的？</div><br><div class="sticker alt">1 分鐘小檢查</div>
+    <img class="photo" src="img/quiz/q_intro.jpg" alt="羊毛氈心臟靠著一張縫了三個勾勾的小卡">
+    <p class="lead">回答 6 個問題，幫你整理三件事：要不要馬上就醫、該不該掛門診，最後送你一張可以帶去看診的小抄。這不是診斷，是讓你不慌張、看診時講得清楚。</p>
+    <button class="btn" data-go="1">開始</button>
+  </section>
+
+  <!-- 1 紅旗 -->
+  <section class="screen" data-step="1">
+    <img class="photo sm" src="img/quiz/r_red.jpg" alt="">
+    <p class="q">先確認安全：心跳怪怪的時候，有沒有同時出現下面任何一種？</p>
+    <p class="hint">可以複選；都沒有就選最下面那格。</p>
+    <div class="opts" data-group="red">
+      <button class="opt" data-v="胸痛"><span class="dot"></span>胸痛</button>
+      <button class="opt" data-v="呼吸急促"><span class="dot"></span>呼吸急促、喘不過氣</button>
+      <button class="opt" data-v="頭暈"><span class="dot"></span>頭暈，或快要昏倒的感覺</button>
+      <button class="opt" data-v="昏倒"><span class="dot"></span>昏倒、失去意識</button>
+      <button class="opt" data-v="冷汗"><span class="dot"></span>不尋常的冒冷汗</button>
+      <button class="opt" data-v="中風"><span class="dot"></span>臉歪、單手無力、說話不清楚</button>
+      <button class="opt none" data-v="none"><span class="dot"></span>都沒有</button>
+    </div>
+    <button class="btn" data-next="1" disabled>下一題</button>
+  </section>
+
+  <!-- 2 感覺像什麼 -->
+  <section class="screen" data-step="2">
+    <p class="q">那種感覺，比較像哪一個？</p>
+    <p class="hint">選一個最接近的就好，說不上來也沒關係。</p>
+    <div class="opts two" data-group="feel" data-single>
+      <button class="opt pic" data-v="skip" data-label="漏一拍，或重重跳一下"><img src="img/quiz/q_skip.jpg" alt="">漏一拍，或重重跳一下</button>
+      <button class="opt pic" data-v="messy" data-label="又快又亂、忽快忽慢"><img src="img/quiz/q_messy.jpg" alt="">又快又亂、忽快忽慢</button>
+      <button class="opt pic" data-v="fast" data-label="一直跳很快"><img src="img/quiz/q_fast.jpg" alt="">一直跳很快</button>
+      <button class="opt pic" data-v="unsure" data-label="說不上來"><img src="img/quiz/q_unsure.jpg" alt="">說不上來</button>
+    </div>
+    <button class="btn" data-next="2" disabled>下一題</button>
+  </section>
+
+  <!-- 3 持續多久 -->
+  <section class="screen" data-step="3">
+    <img class="photo sm" src="img/quiz/q_duration.jpg" alt="">
+    <p class="q">一次大概持續多久？</p>
+    <div class="opts" data-group="dur" data-single>
+      <button class="opt" data-v="sec" data-label="幾秒就恢復"><span class="dot"></span>幾秒就恢復</button>
+      <button class="opt" data-v="min" data-label="好幾分鐘才停"><span class="dot"></span>好幾分鐘才停</button>
+      <button class="opt" data-v="now" data-label="現在還在，休息後也沒緩解"><span class="dot"></span>現在還在，休息後也沒緩解</button>
+    </div>
+    <button class="btn" data-next="3" disabled>下一題</button>
+  </section>
+
+  <!-- 4 怎麼開始 -->
+  <section class="screen" data-step="4">
+    <img class="photo sm" src="img/quiz/q_onset.jpg" alt="">
+    <p class="q">它是怎麼開始的？</p>
+    <p class="hint">醫師常會問這一題，先想一下，看診時就答得出來。</p>
+    <div class="opts" data-group="onset" data-single>
+      <button class="opt" data-v="sudden" data-label="突然開始、突然停"><span class="dot"></span>突然開始、突然停</button>
+      <button class="opt" data-v="slow" data-label="慢慢變快、慢慢緩下來"><span class="dot"></span>慢慢變快、慢慢緩下來</button>
+      <button class="opt" data-v="idk" data-label="沒注意到"><span class="dot"></span>沒注意到</button>
+    </div>
+    <button class="btn" data-next="4" disabled>下一題</button>
+  </section>
+
+  <!-- 5 發作前在做什麼 -->
+  <section class="screen" data-step="5">
+    <img class="photo sm" src="img/quiz/q_trigger.jpg" alt="">
+    <p class="q">發作前後，有沒有這些情況？</p>
+    <p class="hint">可以複選；想不到就選最下面那格。</p>
+    <div class="opts" data-group="trig">
+      <button class="opt" data-v="caffeine" data-label="喝了咖啡、濃茶或能量飲料"><span class="dot"></span>喝了咖啡、濃茶或能量飲料</button>
+      <button class="opt" data-v="smoke" data-label="抽菸或喝酒"><span class="dot"></span>抽菸或喝酒</button>
+      <button class="opt" data-v="sleep" data-label="熬夜、睡不好"><span class="dot"></span>熬夜、睡不好</button>
+      <button class="opt" data-v="stress" data-label="壓力大、焦慮"><span class="dot"></span>壓力大、焦慮</button>
+      <button class="opt" data-v="exercise" data-label="剛運動完"><span class="dot"></span>剛運動完</button>
+      <button class="opt" data-v="med" data-label="發燒，或吃了感冒、鼻塞藥"><span class="dot"></span>發燒，或吃了感冒、鼻塞藥</button>
+      <button class="opt none" data-v="none" data-label="想不到"><span class="dot"></span>想不到</button>
+    </div>
+    <button class="btn" data-next="5" disabled>下一題</button>
+  </section>
+
+  <!-- 6 頻率與身體狀況 -->
+  <section class="screen" data-step="6">
+    <img class="photo sm" src="img/quiz/q_often.jpg" alt="">
+    <p class="q">最後一題：下面這些，有沒有符合你的？</p>
+    <p class="hint">可以複選；都沒有就選最下面那格。</p>
+    <div class="opts" data-group="clinic">
+      <button class="opt" data-v="first" data-label="第一次出現，或這次感覺和以前不同"><span class="dot"></span>第一次出現心悸，或這次的感覺和以前不同</button>
+      <button class="opt" data-v="more" data-label="越來越頻繁"><span class="dot"></span>越來越頻繁</button>
+      <button class="opt" data-v="extra" data-label="常感覺到多跳的心跳"><span class="dot"></span>常感覺到多跳的心跳，每分鐘超過 6 下，或連續 3 下以上一起出現</button>
+      <button class="opt" data-v="pulse" data-label="休息時脈搏超過每分鐘 100 下"><span class="dot"></span>沒有運動、焦慮或發燒，休息時脈搏卻超過每分鐘 100 下</button>
+      <button class="opt" data-v="disease" data-label="有心臟病或三高"><span class="dot"></span>原本就有心臟病，或有高血壓、糖尿病、高血脂</button>
+      <button class="opt none" data-v="none" data-label="都沒有"><span class="dot"></span>都沒有</button>
+    </div>
+    <button class="btn" data-next="6" disabled>看結果</button>
+  </section>
+
+  <!-- 7 結果 -->
+  <section class="screen" data-step="7" id="res"></section>
+
+  <p class="fine">本頁內容整理自林柏霖醫師網站的衛教文章，是一般衛教，不能取代面對面的診察。</p>
+</div>
+<div class="toast" id="toast">小抄已複製</div>
+
+<script>
+(function(){
+  /* ---------- 音效：瀏覽器現場合成，沒有音檔 ---------- */
+  var KEY="drlin-sfx",ctx=null,out=null;
+  var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var on=(function(){try{var v=localStorage.getItem(KEY);return v===null?!reduce:v==="1"}catch(e){return !reduce}})();
+  function audio(){if(!ctx){var A=window.AudioContext||window.webkitAudioContext;if(!A)return null;ctx=new A();out=ctx.createGain();out.gain.value=.8;out.connect(ctx.destination)}
+    if(ctx.state==="suspended")ctx.resume();return ctx}
+  function tone(f,d,v,w,t,f2){var c=audio();if(!c)return;var s=c.currentTime+(t||0),o=c.createOscillator(),g=c.createGain();
+    o.type=w;o.frequency.setValueAtTime(f,s);if(f2)o.frequency.exponentialRampToValueAtTime(f2,s+d);
+    g.gain.setValueAtTime(.0001,s);g.gain.exponentialRampToValueAtTime(v,s+.004);g.gain.exponentialRampToValueAtTime(.0001,s+d);
+    o.connect(g);g.connect(out);o.start(s);o.stop(s+d+.03)}
+  var SFX={pop:function(){tone(500,.10,.14,"sine",0,820)},unpop:function(){tone(700,.08,.10,"sine",0,450)},
+    next:function(){tone(660,.07,.10,"triangle");tone(990,.09,.08,"triangle",.06)},
+    done:function(){tone(587,.12,.11,"triangle");tone(784,.12,.11,"triangle",.09);tone(1175,.24,.09,"triangle",.18)},
+    alert:function(){tone(440,.18,.12,"sine");tone(440,.18,.12,"sine",.26)},back:function(){tone(620,.09,.09,"sine",0,400)},
+    copy:function(){tone(1400,.04,.07,"triangle");tone(1900,.06,.05,"sine",.03)}};
+  function play(n){if(on&&SFX[n])SFX[n]()}
+  var sb=document.getElementById("snd");
+  function paint(){sb.textContent=on?"♪":"♪̸";sb.style.opacity=on?1:.55}
+  sb.addEventListener("click",function(){on=!on;try{localStorage.setItem(KEY,on?"1":"0")}catch(e){}paint();play("pop")});paint();
+
+  /* ---------- 毛線進度（6 題） ---------- */
+  var Q=6,yarn=document.getElementById("yarn"),done=document.getElementById("done"),cnt=document.getElementById("count"),beads=[];
+  for(var i=0;i<Q;i++){var b=document.createElement("span");b.className="bead";b.style.left=(i/(Q-1)*100)+"%";yarn.appendChild(b);beads.push(b)}
+  function progress(step){var k=Math.min(step,Q);done.style.width=(Math.max(0,k-1)/(Q-1)*100)+"%";beads.forEach(function(b,j){b.classList.toggle("on",j<k)});
+    cnt.textContent=step>=1&&step<=Q?"第 "+step+" 題／共 "+Q+" 題":(step>Q?"完成！":"")}
+
+  /* ---------- 流程 ---------- */
+  function fresh(){return {red:[],feel:null,dur:null,onset:null,trig:[],clinic:[]}}
+  var ans=fresh();
+  function show(n){document.querySelectorAll(".screen").forEach(function(s){s.classList.toggle("show",+s.dataset.step===n)});progress(n);window.scrollTo({top:0,behavior:reduce?"auto":"smooth"})}
+  document.querySelectorAll("[data-go]").forEach(function(b){b.addEventListener("click",function(){play("next");show(+b.dataset.go)})});
+  document.querySelectorAll(".opts").forEach(function(g){
+    var key=g.dataset.group,single=g.hasAttribute("data-single"),next=g.parentElement.querySelector("[data-next]");
+    g.addEventListener("click",function(e){
+      var o=e.target.closest(".opt");if(!o)return;var v=o.dataset.v;
+      if(single){g.querySelectorAll(".opt").forEach(function(x){x.classList.toggle("on",x===o)});ans[key]=v;play("pop")}
+      else if(v==="none"){g.querySelectorAll(".opt").forEach(function(x){x.classList.toggle("on",x===o)});ans[key]=["none"];play("pop")}
+      else{g.querySelector('[data-v="none"]').classList.remove("on");o.classList.toggle("on");
+        ans[key]=[].map.call(g.querySelectorAll(".opt.on"),function(x){return x.dataset.v});play(o.classList.contains("on")?"pop":"unpop")}
+      o.classList.remove("wiggle");void o.offsetWidth;o.classList.add("wiggle");
+      next.disabled=single?!ans[key]:!ans[key].length;
+    });
+  });
+  function has(k){return ans[k].length&&ans[k][0]!=="none"}
+  document.querySelectorAll("[data-next]").forEach(function(b){b.addEventListener("click",function(){
+    var s=+b.dataset.next;
+    if(s===1&&has("red")){result("red");return}
+    // 早期收縮文章：心跳持續很快、很亂，休息後沒有緩解 → 要立刻就醫，不要等門診
+    if(s===3&&ans.dur==="now"&&(ans.feel==="messy"||ans.feel==="fast")){result("red2");return}
+    if(s===6){result(has("clinic")||ans.dur==="now"?"orange":"green");return}
+    play("next");show(s+1)})});
+
+  /* ---------- 結果：句子照網站文章原句（心悸是什麼感覺、早期收縮、心房顫動、心悸看哪科） ---------- */
+  var READ={skip:["review-premature-contractions-97018e9a.html","img/quiz/q_skip.jpg","早期收縮是什麼？心臟漏跳一拍的原因與治療時機"],
+    messy:["af-symptoms-treatment.html","img/quiz/q_messy.jpg","心房顫動是什麼？症狀與治療一次看懂"],
+    fast:["review-palpitations-361e6db5.html","img/quiz/q_fast.jpg","心悸是什麼感覺？原因、哪些情況要馬上就醫"],
+    unsure:["review-choose-ep-doctor-25891f7c.html","img/quiz/q_unsure.jpg","心悸看哪科？心律不整掛號前可以準備的 7 件事"]};
+  function lab(group,v){var el=document.querySelector('[data-group="'+group+'"] [data-v="'+v+'"]');return el?el.dataset.label:""}
+  function labs(group){return has(group)?ans[group].map(function(v){return lab(group,v)}).join("；"):lab(group,"none")}
+  function noteText(){
+    return ["【帶去給醫師看的小抄】","感覺："+lab("feel",ans.feel),"一次多久："+lab("dur",ans.dur),"怎麼開始："+lab("onset",ans.onset),
+      "發作前後："+labs("trig"),"其他情況："+labs("clinic"),"日期、時間：","當時脈搏（每分鐘幾下、規不規律）："].join("\n")}
+  function noteCard(){
+    return '<div class="note"><h3>帶去給醫師看的小抄</h3><dl>'+
+      '<dt>感覺</dt><dd>'+lab("feel",ans.feel)+'</dd><dt>一次多久</dt><dd>'+lab("dur",ans.dur)+'</dd>'+
+      '<dt>怎麼開始</dt><dd>'+lab("onset",ans.onset)+'</dd><dt>發作前後</dt><dd>'+labs("trig")+'</dd>'+
+      '<dt>其他情況</dt><dd>'+labs("clinic")+'</dd><dt>日期、時間</dt><dd><span class="blank"></span></dd>'+
+      '<dt>當時脈搏</dt><dd><span class="blank"></span></dd></dl></div>'+
+      '<button class="btn ghost" id="copy">複製小抄，存到手機備忘錄</button>'}
+  var BRING='<div class="box"><h3>看診時也一起帶上</h3><ul><li>發作時用手機錄下的脈搏或心跳數，和日期、時間、持續多久。</li><li>舊的心電圖、24 小時心電圖、心臟超音波報告和正在吃的藥，醫師才不必重做檢查。</li></ul></div>';
+  function trigBox(){
+    if(!has("trig"))return "";
+    var t='<div class="box"><h3>你勾的情況，常是心悸的誘因</h3><p>咖啡因、尼古丁、酒精、壓力與焦慮、運動、發燒，以及部分藥物，例如鼻塞用的解充血劑和減肥藥；睡不好、壓力大時，心悸也常變多。</p>';
+    if(ans.trig.indexOf("stress")>=0)t+='<p>焦慮和壓力本來就會引起心悸，但不能因此就認定沒事。</p>';
+    return t+'</div>'}
+  function readCard(){var r=READ[ans.feel||"unsure"];return '<a class="read" href="'+r[0]+'"><img src="'+r[1]+'" alt=""><span><small>想多了解這種感覺，可以看</small>'+r[2]+'</span></a>'}
+  function result(kind){
+    var h="";
+    if(kind==="red"||kind==="red2"){
+      var stroke=ans.red.indexOf("中風")>=0;
+      h='<img class="photo sm" src="img/quiz/r_red.jpg" alt=""><div class="result red"><span class="badge">請先處理這件事</span>'+
+        (kind==="red2"?'<h2>心跳持續很快、很亂，休息後沒有緩解，要立刻就醫，不要等門診。</h2><p>不舒服時請撥打 119，不要自己開車。</p>':
+        '<h2>請立刻撥打 119 或到急診，不要自己開車。</h2>'+
+        (stroke?'<p>臉歪、單手無力、說話不清楚，這是中風的徵兆，要立刻打 119。</p>':'<p>心悸如果同時出現胸痛、呼吸急促、頭暈或快昏倒、昏倒，或不尋常的冒冷汗，請立刻撥打 119 或到急診，不要等門診。</p>'))+
+        '<a class="call" href="tel:119">撥打 119</a></div>';
+      play("alert");
+    }else if(kind==="orange"){
+      h='<img class="photo sm" src="img/quiz/clinic.jpg" alt=""><div class="result orange"><span class="badge">建議儘快看門診</span><h2>不到撥 119 的程度，但建議儘快到門診。</h2><p>先掛心臟內科就可以，不用先猜是哪一種心律不整。</p></div>'+
+        noteCard()+BRING+trigBox()+readCard()+'<a class="btn" href="clinic.html">看門診時間與掛號</a>';
+      play("done");
+    }else{
+      h='<img class="photo sm" src="img/quiz/r_green.jpg" alt=""><div class="result green"><span class="badge">先觀察、先記錄</span><h2>偶發、很快恢復、沒有其他不舒服，可以先做三件事：</h2>'+
+        '<ol><li>減少咖啡因、尼古丁和酒精，睡足覺。</li><li>把發作時間、持續多久、當時在做什麼、有沒有胸痛或頭暈寫下來。</li><li>下次發作時，如果方便，摸脈搏數一分鐘，記下快慢和規不規律。</li></ol>'+
+        (ans.feel==="skip"?'<p>偶爾漏跳一下、很快恢復、沒有其他不舒服，通常不用緊張，但仍建議做一次心電圖，把心臟結構與心律檢查過，之後才能放心。</p>':'')+
+        '<p>若是第一次出現、感覺和以前不同或越來越頻繁，請掛門診。</p></div>'+noteCard()+trigBox()+readCard();
+      play("done");
+    }
+    h+='<button class="btn ghost" id="again">重新做一次</button>';
+    var r=document.getElementById("res");r.innerHTML=h;show(7);
+    var cp=document.getElementById("copy");
+    if(cp)cp.addEventListener("click",function(){var t=noteText();
+      (navigator.clipboard&&navigator.clipboard.writeText?navigator.clipboard.writeText(t):Promise.reject()).catch(function(){var a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();try{document.execCommand("copy")}catch(e){}a.remove()})
+      .finally(function(){play("copy");var o=document.getElementById("toast");o.classList.add("show");setTimeout(function(){o.classList.remove("show")},1600)})});
+    document.getElementById("again").addEventListener("click",function(){
+      ans=fresh();document.querySelectorAll(".opt.on").forEach(function(x){x.classList.remove("on")});
+      document.querySelectorAll("[data-next]").forEach(function(b){b.disabled=true});play("back");show(0)});
+  }
+  progress(0);
+})();
+</script>
+</body>
+</html>
