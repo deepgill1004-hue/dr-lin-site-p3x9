@@ -537,7 +537,7 @@ body{background-image:radial-gradient(rgba(35,65,61,.05) 1px,transparent 1.3px),
 .jcard::after,.post::after{content:"";position:absolute;inset:7px;border:2px dashed rgba(75,115,104,.35);border-radius:18px;pointer-events:none}
 .pimg.stitch::after{inset:8px;border-color:rgba(246,243,236,.85)}
 .jcard{background:var(--wool)}
-#t-h,#t2-h,#j-h,#v-h,#p-h,#pr-h,#g-h,#mf-h{display:inline-block;position:relative;background:var(--wool);border:2px solid var(--ink);box-shadow:4px 4px 0 rgba(35,65,61,.8);border-radius:16px;padding:8px 22px;transform:rotate(-1.2deg);outline:2px dashed rgba(163,68,75,.45);outline-offset:-7px}
+#t-h,#t2-h,#j-h,#v-h,#p-h,#pr-h,#g-h,#mf-h{display:inline-block;position:relative;background:var(--wool);color:var(--ink);border:2px solid var(--ink);box-shadow:4px 4px 0 rgba(35,65,61,.8);border-radius:16px;padding:8px 22px;transform:rotate(-1.2deg);outline:2px dashed rgba(163,68,75,.45);outline-offset:-7px}
 #t2-h,#v-h,#g-h{transform:rotate(1deg)}
 .hero2 h1.where span:not(.vh),.post .kick,.kick{display:inline-block;border:2px dashed var(--rose);border-radius:999px;padding:2px 12px;background:var(--rose-2);transform:rotate(-1.5deg)}
 .nav a{border-radius:10px;padding:4px 8px}
