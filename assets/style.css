@@ -516,10 +516,10 @@ html.js .rv.in{opacity:1;transform:none}
 .menu-panel .ic{background:var(--felt);color:var(--moss)}
 .menu-panel a.reg{background:var(--rose);color:#fff;margin-top:4px}
 .menu-panel a.reg .ic{background:rgba(255,255,255,.2);color:#fff}
-.evid{margin:10px auto 22px;max-width:460px}
+.evid{margin:10px auto 22px;max-width:min(560px,calc(78vh * .8))}
 .evid video{display:block;width:100%;height:auto;border-radius:18px;background:var(--ink)}
 .evid figcaption{margin-top:8px;font-size:15px;line-height:1.6;color:var(--ink);opacity:.78}
-.evid.lead{margin:4px auto 26px;max-width:min(440px,calc(52vh * .8))}
+.evid.lead{margin:4px auto 26px;max-width:min(560px,calc(78vh * .8))}
 .evid.lead figcaption{text-align:center}
 .rvnote{margin-top:16px}
 @media(max-width:640px){.rvnote{margin-top:8px;padding:7px 12px;border-radius:10px;font-size:13.5px;line-height:1.45}main.rv .ztabs{display:none}}
@@ -575,3 +575,12 @@ body{background-image:radial-gradient(rgba(35,65,61,.05) 1px,transparent 1.3px),
 @media(min-width:981px){.fab-reg{display:inline-flex;align-items:center;gap:8px;position:fixed;right:76px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:32;padding:11px 20px;border-radius:999px;background:var(--rose);color:#fff;font-weight:700;font-size:17px;line-height:1;text-decoration:none;border:2px solid var(--ink);box-shadow:3px 3px 0 rgba(35,65,61,.85)}.fab-reg svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.fab-reg:hover{filter:brightness(1.06)}.fab-reg:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--ink)}}
 @media print{.fab-reg{display:none}}
 .tw.up th:first-child,.tw.up td:first-child{white-space:nowrap}   /* 11/18 舊文升級的對照表：第一欄是短標籤，不斷行 */
+
+/* 11/18 動畫播放器：全螢幕鈕、載入中轉圈（載入時蓋一層透明，不會被誤按成暫停） */
+.pvfs{position:absolute;top:10px;right:10px;z-index:4;border:0;border-radius:999px;padding:7px 13px;background:rgba(29,42,42,.78);color:#fff;font:700 14px/1.2 var(--round,inherit);cursor:pointer}
+.pvfs:hover{background:rgba(29,42,42,.92)}.pvfs:focus-visible{outline:3px solid #f7f9fc;outline-offset:3px}
+.pv.ld::after{content:"";position:absolute;inset:0;z-index:3}
+.pv.ld .pvplay{opacity:1!important;pointer-events:none;background-image:none}
+.pv.ld .pvplay::after{content:"";position:absolute;inset:22px;border:5px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:pvspin .9s linear infinite}
+@keyframes pvspin{to{transform:rotate(360deg)}}
+@media(max-width:520px){.pv.ld .pvplay::after{inset:19px}}
