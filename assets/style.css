@@ -569,3 +569,9 @@ body{background-image:radial-gradient(rgba(35,65,61,.05) 1px,transparent 1.3px),
 .scpop button{flex:none;width:32px;height:32px;border:0;background:transparent;font-size:22px;color:var(--ink-2);cursor:pointer}
 @media(max-width:980px){.scpop{left:10px;bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
 @media print{.scpop,.sc-hero{display:none}}
+
+/* 11/18 電腦版「網路掛號」浮標：981px 以上手機底部列隱藏、1240px 以下頁首鈕隱藏，讀到一半要隨時按得到 */
+.fab-reg{display:none}
+@media(min-width:981px){.fab-reg{display:inline-flex;align-items:center;gap:8px;position:fixed;right:76px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:32;padding:11px 20px;border-radius:999px;background:var(--rose);color:#fff;font-weight:700;font-size:17px;line-height:1;text-decoration:none;border:2px solid var(--ink);box-shadow:3px 3px 0 rgba(35,65,61,.85)}.fab-reg svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.fab-reg:hover{filter:brightness(1.06)}.fab-reg:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--ink)}}
+@media print{.fab-reg{display:none}}
+.tw.up th:first-child,.tw.up td:first-child{white-space:nowrap}   /* 11/18 舊文升級的對照表：第一欄是短標籤，不斷行 */
