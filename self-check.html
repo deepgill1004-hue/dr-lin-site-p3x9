@@ -1,6 +1,7 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="zh-Hant-TW">
 <head>
+<meta name="description" content="心跳太慢、漏跳、亂跳或太快？回答 6 個問題，1 分鐘整理要不要馬上就醫、該不該掛心臟內科門診，最後給你一張看診小抄。新竹馬偕心臟內科林柏霖醫師的衛教小工具，不是診斷。"><link rel="canonical" href="https://deepgill1004-hue.github.io/dr-lin-site-p3x9/self-check.html"><meta property="og:type" content="website"><meta property="og:locale" content="zh_TW"><meta property="og:title" content="心跳怪怪的？1 分鐘小檢查｜林柏霖醫師"><meta property="og:description" content="心跳太慢、漏跳、亂跳或太快？回答 6 個問題，1 分鐘整理要不要馬上就醫、該不該掛心臟內科門診，最後給你一張看診小抄。新竹馬偕心臟內科林柏霖醫師的衛教小工具，不是診斷。"><meta property="og:url" content="https://deepgill1004-hue.github.io/dr-lin-site-p3x9/self-check.html"><meta property="og:image" content="https://deepgill1004-hue.github.io/dr-lin-site-p3x9/img/quiz/q_intro.jpg">
 <meta name="robots" content="noindex,nofollow">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,8 +32,9 @@ body{background:var(--wool);color:var(--ink);font-family:var(--sans);font-size:1
 @keyframes in{from{opacity:0;transform:translateY(14px) scale(.98)}to{opacity:1;transform:none}}
 .sticker{display:inline-block;background:#fff;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--ink);border-radius:14px;padding:8px 16px;
   font-family:var(--round);font-size:26px;line-height:1.35;transform:rotate(-1.3deg);margin:0 0 10px}
+.scttl{margin:0;font:inherit}
 .sticker.alt{transform:rotate(1deg);background:var(--rose-2)}
-.photo{width:100%;aspect-ratio:3/2;object-fit:cover;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);border-radius:20px;display:block;margin:6px 0 16px;background:var(--felt)}
+.photo{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);border-radius:20px;display:block;margin:6px 0 16px;background:var(--felt)}
 .photo.sm{aspect-ratio:2/1;margin-top:0;transform:rotate(.6deg)}
 .lead{margin:0 0 16px;color:var(--ink-2)}
 .q{font-family:var(--round);font-size:22px;line-height:1.45;margin:4px 0 6px}
@@ -46,7 +48,7 @@ body{background:var(--wool);color:var(--ink);font-family:var(--sans);font-size:1
 .opt.on{background:var(--rose-2)}
 .opt.on .dot{background:var(--rose);box-shadow:inset 0 0 0 3px #fff}
 .opt.pic{flex-direction:column;align-items:stretch;padding:8px;gap:6px;text-align:center}
-.opt.pic img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;border:2px solid var(--ink)}
+.opt.pic img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:10px;border:2px solid var(--ink)}
 .opt.none{background:var(--felt)}
 .opt.none.on{background:var(--felt)}
 .btn{display:block;width:100%;text-align:center;text-decoration:none;font:inherit;font-family:var(--round);font-size:20px;cursor:pointer;border:2px solid var(--ink);border-radius:999px;padding:12px 18px;
@@ -90,15 +92,15 @@ body{background:var(--wool);color:var(--ink);font-family:var(--sans);font-size:1
 
   <!-- 0 開場 -->
   <section class="screen show" data-step="0">
-    <div class="sticker">心跳怪怪的？</div><br><div class="sticker alt">1 分鐘小檢查</div>
-    <img class="photo" src="img/quiz/q_intro.jpg" alt="羊毛氈心臟靠著一張縫了三個勾勾的小卡">
+    <h1 class="scttl"><span class="sticker">心跳怪怪的？</span><br><span class="sticker alt">1 分鐘小檢查</span></h1>
+    <img class="photo" src="img/quiz/q_intro.jpg" alt="羊毛氈心臟靠著一張縫了三個勾勾的小卡" width="960" height="640">
     <p class="lead">回答 6 個問題，幫你整理三件事：要不要馬上就醫、該不該掛門診，最後送你一張可以帶去看診的小抄。這不是診斷，是讓你不慌張、看診時講得清楚。</p>
     <button class="btn" data-go="1">開始</button>
   </section>
 
   <!-- 1 紅旗 -->
   <section class="screen" data-step="1">
-    <img class="photo sm" src="img/quiz/r_red.jpg" alt="">
+    <img class="photo sm" src="img/quiz/r_red.jpg" alt="" width="960" height="640">
     <p class="q">先確認安全：心跳怪怪的時候，有沒有同時出現下面任何一種？</p>
     <p class="hint">可以複選；都沒有就選最下面那格。</p>
     <div class="opts" data-group="red">
@@ -118,17 +120,17 @@ body{background:var(--wool);color:var(--ink);font-family:var(--sans);font-size:1
     <p class="q">那種感覺，比較像哪一個？</p>
     <p class="hint">選一個最接近的就好，說不上來也沒關係。</p>
     <div class="opts two" data-group="feel" data-single>
-      <button class="opt pic" data-v="skip" data-label="漏一拍，或重重跳一下"><img src="img/quiz/q_skip.jpg" alt="">漏一拍，或重重跳一下</button>
-      <button class="opt pic" data-v="messy" data-label="又快又亂、忽快忽慢"><img src="img/quiz/q_messy.jpg" alt="">又快又亂、忽快忽慢</button>
-      <button class="opt pic" data-v="fast" data-label="一直跳很快"><img src="img/quiz/q_fast.jpg" alt="">一直跳很快</button>
-      <button class="opt pic" data-v="unsure" data-label="說不上來"><img src="img/quiz/q_unsure.jpg" alt="">說不上來</button>
+      <button class="opt pic" data-v="skip" data-label="漏一拍，或重重跳一下"><img src="img/quiz/q_skip.jpg" alt="" width="960" height="480">漏一拍，或重重跳一下</button>
+      <button class="opt pic" data-v="messy" data-label="又快又亂、忽快忽慢"><img src="img/quiz/q_messy.jpg" alt="" width="960" height="640">又快又亂、忽快忽慢</button>
+      <button class="opt pic" data-v="fast" data-label="一直跳很快"><img src="img/quiz/q_fast.jpg" alt="" width="960" height="640">一直跳很快</button>
+      <button class="opt pic" data-v="unsure" data-label="說不上來"><img src="img/quiz/q_unsure.jpg" alt="" width="960" height="640">說不上來</button>
     </div>
     <button class="btn" data-next="2" disabled>下一題</button>
   </section>
 
   <!-- 3 持續多久 -->
   <section class="screen" data-step="3">
-    <img class="photo sm" src="img/quiz/q_duration.jpg" alt="">
+    <img class="photo sm" src="img/quiz/q_duration.jpg" alt="" width="960" height="640">
     <p class="q">一次大概持續多久？</p>
     <div class="opts" data-group="dur" data-single>
       <button class="opt" data-v="sec" data-label="幾秒就恢復"><span class="dot"></span>幾秒就恢復</button>
@@ -140,7 +142,7 @@ body{background:var(--wool);color:var(--ink);font-family:var(--sans);font-size:1
 
   <!-- 4 怎麼開始 -->
   <section class="screen" data-step="4">
-    <img class="photo sm" src="img/quiz/q_onset.jpg" alt="">
+    <img class="photo sm" src="img/quiz/q_onset.jpg" alt="" width="960" height="640">
     <p class="q">它是怎麼開始的？</p>
     <p class="hint">醫師常會問這一題，先想一下，看診時就答得出來。</p>
     <div class="opts" data-group="onset" data-single>
@@ -153,7 +155,7 @@ body{background:var(--wool);color:var(--ink);font-family:var(--sans);font-size:1
 
   <!-- 5 發作前在做什麼 -->
   <section class="screen" data-step="5">
-    <img class="photo sm" src="img/quiz/q_trigger.jpg" alt="">
+    <img class="photo sm" src="img/quiz/q_trigger.jpg" alt="" width="960" height="640">
     <p class="q">發作前後，有沒有這些情況？</p>
     <p class="hint">可以複選；想不到就選最下面那格。</p>
     <div class="opts" data-group="trig">
@@ -170,7 +172,7 @@ body{background:var(--wool);color:var(--ink);font-family:var(--sans);font-size:1
 
   <!-- 6 頻率與身體狀況 -->
   <section class="screen" data-step="6">
-    <img class="photo sm" src="img/quiz/q_often.jpg" alt="">
+    <img class="photo sm" src="img/quiz/q_often.jpg" alt="" width="960" height="640">
     <p class="q">最後一題：下面這些，有沒有符合你的？</p>
     <p class="hint">可以複選；都沒有就選最下面那格。</p>
     <div class="opts" data-group="clinic">
@@ -273,18 +275,18 @@ body{background:var(--wool);color:var(--ink);font-family:var(--sans);font-size:1
     var h="";
     if(kind==="red"||kind==="red2"){
       var stroke=ans.red.indexOf("中風")>=0;
-      h='<img class="photo sm" src="img/quiz/r_red.jpg" alt=""><div class="result red"><span class="badge">請先處理這件事</span>'+
+      h='<img class="photo sm" src="img/quiz/r_red.jpg" alt="" width="960" height="640"><div class="result red"><span class="badge">請先處理這件事</span>'+
         (kind==="red2"?'<h2>心跳持續很快、很亂，休息後沒有緩解，要立刻就醫，不要等門診。</h2><p>不舒服時請撥打 119，不要自己開車。</p>':
         '<h2>請立刻撥打 119 或到急診，不要自己開車。</h2>'+
         (stroke?'<p>臉歪、單手無力、說話不清楚，這是中風的徵兆，要立刻打 119。</p>':'<p>心悸如果同時出現胸痛、呼吸急促、頭暈或快昏倒、昏倒，或不尋常的冒冷汗，請立刻撥打 119 或到急診，不要等門診。</p>'))+
         '<a class="call" href="tel:119">撥打 119</a></div>';
       play("alert");
     }else if(kind==="orange"){
-      h='<img class="photo sm" src="img/quiz/clinic.jpg" alt=""><div class="result orange"><span class="badge">建議儘快看門診</span><h2>不到撥 119 的程度，但建議儘快到門診。</h2><p>先掛心臟內科就可以，不用先猜是哪一種心律不整。</p></div>'+
+      h='<img class="photo sm" src="img/quiz/clinic.jpg" alt="" width="960" height="640"><div class="result orange"><span class="badge">建議儘快看門診</span><h2>不到撥 119 的程度，但建議儘快到門診。</h2><p>先掛心臟內科就可以，不用先猜是哪一種心律不整。</p></div>'+
         noteCard()+BRING+trigBox()+readCard()+'<a class="btn" href="clinic.html">看門診時間與掛號</a>';
       play("done");
     }else{
-      h='<img class="photo sm" src="img/quiz/r_green.jpg" alt=""><div class="result green"><span class="badge">先觀察、先記錄</span><h2>偶發、很快恢復、沒有其他不舒服，可以先做三件事：</h2>'+
+      h='<img class="photo sm" src="img/quiz/r_green.jpg" alt="" width="960" height="640"><div class="result green"><span class="badge">先觀察、先記錄</span><h2>偶發、很快恢復、沒有其他不舒服，可以先做三件事：</h2>'+
         '<ol><li>減少咖啡因、尼古丁和酒精，睡足覺。</li><li>把發作時間、持續多久、當時在做什麼、有沒有胸痛或頭暈寫下來。</li><li>下次發作時，如果方便，摸脈搏數一分鐘，記下快慢和規不規律。</li></ol>'+
         (ans.feel==="skip"?'<p>偶爾漏跳一下、很快恢復、沒有其他不舒服，通常不用緊張，但仍建議做一次心電圖，把心臟結構與心律檢查過，之後才能放心。</p>':'')+
         '<p>若是第一次出現、感覺和以前不同或越來越頻繁，請掛門診。</p></div>'+noteCard()+trigBox()+readCard();
