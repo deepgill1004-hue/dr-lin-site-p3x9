@@ -100,7 +100,7 @@ body{background:var(--wool);color:var(--ink);font-family:var(--sans);font-size:1
 
   <!-- 1 紅旗 -->
   <section class="screen" data-step="1">
-    <img class="photo sm" src="img/quiz/r_red.jpg" alt="" width="960" height="640">
+    <img class="photo sm" src="img/quiz/r_red.jpg" alt="羊毛氈插畫：電話話筒旁邊一顆小紅心，代表要立刻撥 119 求助" width="960" height="640">
     <p class="q">先確認安全：心跳怪怪的時候，有沒有同時出現下面任何一種？</p>
     <p class="hint">可以複選；都沒有就選最下面那格。</p>
     <div class="opts" data-group="red">
@@ -130,7 +130,7 @@ body{background:var(--wool);color:var(--ink);font-family:var(--sans);font-size:1
 
   <!-- 3 持續多久 -->
   <section class="screen" data-step="3">
-    <img class="photo sm" src="img/quiz/q_duration.jpg" alt="" width="960" height="640">
+    <img class="photo sm" src="img/quiz/q_duration.jpg" alt="羊毛氈插畫：沙漏旁邊一顆小紅心，代表心悸一次持續多久" width="960" height="640">
     <p class="q">一次大概持續多久？</p>
     <div class="opts" data-group="dur" data-single>
       <button class="opt" data-v="sec" data-label="幾秒就恢復"><span class="dot"></span>幾秒就恢復</button>
@@ -142,7 +142,7 @@ body{background:var(--wool);color:var(--ink);font-family:var(--sans);font-size:1
 
   <!-- 4 怎麼開始 -->
   <section class="screen" data-step="4">
-    <img class="photo sm" src="img/quiz/q_onset.jpg" alt="" width="960" height="640">
+    <img class="photo sm" src="img/quiz/q_onset.jpg" alt="羊毛氈插畫：一座陡坡和一座緩坡，代表心悸是突然開始還是慢慢開始" width="960" height="640">
     <p class="q">它是怎麼開始的？</p>
     <p class="hint">醫師常會問這一題，先想一下，看診時就答得出來。</p>
     <div class="opts" data-group="onset" data-single>
@@ -155,7 +155,7 @@ body{background:var(--wool);color:var(--ink);font-family:var(--sans);font-size:1
 
   <!-- 5 發作前在做什麼 -->
   <section class="screen" data-step="5">
-    <img class="photo sm" src="img/quiz/q_trigger.jpg" alt="" width="960" height="640">
+    <img class="photo sm" src="img/quiz/q_trigger.jpg" alt="羊毛氈插畫：咖啡杯、月亮和茶杯，代表喝咖啡、熬夜這類可能的誘發因素" width="960" height="640">
     <p class="q">發作前後，有沒有這些情況？</p>
     <p class="hint">可以複選；想不到就選最下面那格。</p>
     <div class="opts" data-group="trig">
@@ -172,7 +172,7 @@ body{background:var(--wool);color:var(--ink);font-family:var(--sans);font-size:1
 
   <!-- 6 頻率與身體狀況 -->
   <section class="screen" data-step="6">
-    <img class="photo sm" src="img/quiz/q_often.jpg" alt="" width="960" height="640">
+    <img class="photo sm" src="img/quiz/q_often.jpg" alt="羊毛氈插畫：月曆上點著幾個紅點，代表心悸多久發作一次" width="960" height="640">
     <p class="q">最後一題：下面這些，有沒有符合你的？</p>
     <p class="hint">可以複選；都沒有就選最下面那格。</p>
     <div class="opts" data-group="clinic">
@@ -275,7 +275,7 @@ body{background:var(--wool);color:var(--ink);font-family:var(--sans);font-size:1
     var h="";
     if(kind==="red"||kind==="red2"){
       var stroke=ans.red.indexOf("中風")>=0;
-      h='<img class="photo sm" src="img/quiz/r_red.jpg" alt="" width="960" height="640"><div class="result red"><span class="badge">請先處理這件事</span>'+
+      h='<img class="photo sm" src="img/quiz/r_red.jpg" alt="羊毛氈插畫：電話話筒旁邊一顆小紅心，代表要立刻撥 119 求助" width="960" height="640"><div class="result red"><span class="badge">請先處理這件事</span>'+
         (kind==="red2"?'<h2>心跳持續很快、很亂，休息後沒有緩解，要立刻就醫，不要等門診。</h2><p>不舒服時請撥打 119，不要自己開車。</p>':
         '<h2>請立刻撥打 119 或到急診，不要自己開車。</h2>'+
         (stroke?'<p>臉歪、單手無力、說話不清楚，這是中風的徵兆，要立刻打 119。</p>':'<p>心悸如果同時出現胸痛、呼吸急促、頭暈或快昏倒、昏倒，或不尋常的冒冷汗，請立刻撥打 119 或到急診，不要等門診。</p>'))+
