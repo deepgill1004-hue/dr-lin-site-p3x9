@@ -709,18 +709,21 @@ body{background-image:radial-gradient(rgba(35,65,61,.05) 1px,transparent 1.3px),
 .nacts{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:8px}
 .post .evid.lead figcaption{text-align:left}
 .post .evid .pv{border:0!important;box-shadow:none!important;border-radius:16px!important}
-/* 「本篇重點」框三種樣式（2026-11-19 凱菲：「沒有其他的美編跟編框嗎？給我三個選」；選樣頁 pick.html，選定後改成 .post .answer 預設） */
-.post .answer.box-a,.post .answer.box-b,.post .answer.box-c{margin:22px 0 26px;box-shadow:none;border-radius:16px}
-.post .answer.box-a{position:relative;background:#fbf8f1;padding:32px 20px 18px;box-shadow:0 2px 12px rgba(35,65,61,.13)}
-.post .answer.box-a h2{position:absolute;top:-14px;left:14px;margin:0;background:var(--rose);color:#fff;font-family:var(--sans);font-weight:700;font-size:15.5px;line-height:1;padding:9px 14px 9px 12px;border-radius:8px 8px 8px 2px;box-shadow:0 2px 4px rgba(35,65,61,.2)}
-.post .answer.box-b{position:relative;background:#cdd5c1;padding:24px 22px 20px}
-.post .answer.box-b::before{content:"";position:absolute;inset:8px;border:2px dashed rgba(246,243,236,.95);border-radius:11px;pointer-events:none}
-.post .answer.box-b h2{display:flex;align-items:center;gap:8px;font-size:20px}
-.post .answer.box-b h2::before{content:"";width:18px;height:16px;flex:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 16'%3E%3Cpath d='M9 15.5 1.6 8.3A4.4 4.4 0 0 1 9 2.6a4.4 4.4 0 0 1 7.4 5.7z' fill='%23a3444b'/%3E%3C/svg%3E") no-repeat center/contain}
-.post .answer.box-c{position:relative;background:#f7e6a6;border-radius:4px 4px 20px 4px;padding:26px 20px 20px;transform:rotate(-.6deg);box-shadow:0 7px 14px rgba(35,65,61,.17)}
-.post .answer.box-c::before{content:"";position:absolute;top:-11px;left:50%;width:96px;height:24px;transform:translateX(-50%) rotate(2deg);background:rgba(246,243,236,.78);box-shadow:0 1px 3px rgba(35,65,61,.12)}
-.post .answer.box-c h2{font-size:20px}
+/* 「本篇重點」框三選一（2026-11-20 凱菲：「放一個很小的羊毛氈、小頭貼或是其他，底色淡淡的，有做一個色塊區分就可以」）
+   A 羊毛氈小頭像＋淡綠底、B 羊毛氈小愛心＋淡粉底、C 羊毛氈小筆記本＋淡米黃底；選定後把那一組改成 .post .answer 預設 */
+.post .answer.box-a,.post .answer.box-b,.post .answer.box-c{margin:22px 0 26px;box-shadow:none;border-radius:18px;padding:18px 20px 18px}
+.post .answer.box-a{background:#eef2e8}.post .answer.box-b{background:#f9eeec}.post .answer.box-c{background:#f7f1e2}
+.post .answer.box-a h2,.post .answer.box-b h2,.post .answer.box-c h2{display:flex;align-items:center;gap:10px;font-size:20px}
+.post .answer.box-a h2::before,.post .answer.box-b h2::before,.post .answer.box-c h2::before{content:"";width:36px;height:36px;border-radius:50%;flex:none;background:center/cover no-repeat;box-shadow:0 0 0 2px #fff,0 1px 4px rgba(35,65,61,.18)}
+.post .answer.box-a h2::before{background-image:url(../img/felt_avatar_sm.jpg)}
+.post .answer.box-b h2::before{background-image:url(../img/felt_heart_sm.jpg)}
+.post .answer.box-c h2::before{background-image:url(../img/felt_note_sm.jpg)}
 @media(max-width:900px){.post .answer.box-a,.post .answer.box-b,.post .answer.box-c{margin-inline:0}}
-/* 門診頁路線動畫（汽車開到醫院的示意圖） */
-.nroute{display:block;max-width:640px;margin:16px 0 6px;border-radius:26px;overflow:hidden;box-shadow:0 2px 10px rgba(35,65,61,.12)}
-.nroute svg{display:block;width:100%;height:auto}
+/* 門診頁地圖動畫（2026-11-20 凱菲：「風格不是羊毛氈嗎？」→ 先生羊毛氈場景與小車兩張圖，再用 CSS 讓小車沿小路開到醫院門口；減少動態時停在門口） */
+.froute{position:relative;display:block;max-width:640px;margin:16px 0 6px;border-radius:22px;overflow:hidden;box-shadow:0 2px 10px rgba(35,65,61,.14)}
+.froute img.fr-bg{display:block;width:100%;height:auto}
+.fr-car{position:absolute;left:0;bottom:21%;width:15%;animation:frdrive 7s cubic-bezier(.45,0,.3,1) infinite}
+.fr-car img{display:block;width:100%;height:auto;animation:frbob .45s ease-in-out infinite alternate;filter:drop-shadow(0 4px 3px rgba(35,65,61,.28))}
+@keyframes frdrive{0%{transform:translateX(-110%);opacity:0}6%{opacity:1}72%{transform:translateX(457%);opacity:1}88%{transform:translateX(457%);opacity:1}97%,100%{transform:translateX(457%);opacity:0}}
+@keyframes frbob{from{transform:translateY(0)}to{transform:translateY(-4%)}}
+@media (prefers-reduced-motion:reduce){.fr-car{animation:none;transform:translateX(457%)}.fr-car img{animation:none}}

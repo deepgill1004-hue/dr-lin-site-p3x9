@@ -1,6 +1,6 @@
 /* 林醫師網站按鍵音效：瀏覽器現場合成短音、沒有音檔。
    2026-11-12 菲菲選 B 毛氈貼紙後上線；2026-11-19 凱菲：「只要有點選就會有聲音」「給我選三個不同的音效」
-   → 所有可以點的東西都出聲（連結、按鈕、展開列、表單）；三組音色：a 木琴輕敲、b 毛氈泡泡、c 清脆鈴聲。
+   → 所有可以點的東西都出聲（連結、按鈕、展開列、表單）；三組音色（11/20 換第二輪）：a 泡泡啵、b 水滴咚、c 音樂盒叮。
    預設用 THEME；網址帶 ?sfx=a／b／c 可以切換試聽（記在這台手機的 localStorage）。選樣頁：pick.html。
    頁面右下 ♪ 開關照舊；手機開「減少動態效果」預設靜音；iPhone 側邊靜音鍵打開時瀏覽器不會出聲。 */
 (function(){
@@ -15,16 +15,17 @@
     o.type=w;o.frequency.setValueAtTime(f,s);if(f2)o.frequency.exponentialRampToValueAtTime(f2,s+d);
     g.gain.setValueAtTime(.0001,s);g.gain.exponentialRampToValueAtTime(v,s+.004);g.gain.exponentialRampToValueAtTime(.0001,s+d);
     o.connect(g);g.connect(out);o.start(s);o.stop(s+d+.03)}
+  /* 2026-11-20 凱菲：「這三個音效我都不喜歡，不夠清脆可愛，再給我其他選擇」→ 換成更短、更亮的三組（舊三組見 sfx.js.bak-3themes1119） */
   var SETS={
-    a:{tap:function(){tone(784,.07,.14,"triangle");tone(1568,.045,.05,"sine")},                      /* 木琴輕敲：短、木頭感 */
-       open:function(){tone(523,.08,.12,"triangle");tone(784,.08,.10,"triangle",.05)},
-       reg:function(){tone(659,.08,.13,"triangle");tone(988,.12,.11,"triangle",.08)}},
-    b:{tap:function(){tone(420,.09,.15,"sine",0,700)},                                                /* 毛氈泡泡：軟、往上彈 */
-       open:function(){tone(360,.10,.13,"sine",0,560)},
-       reg:function(){tone(440,.10,.14,"sine",0,660);tone(660,.12,.12,"sine",.08,990)}},
-    c:{tap:function(){tone(1760,.22,.06,"sine");tone(2637,.16,.03,"sine")},                           /* 清脆鈴聲：亮、尾音長一點 */
-       open:function(){tone(1568,.20,.06,"sine");tone(2093,.18,.04,"sine",.04)},
-       reg:function(){tone(1319,.25,.07,"sine");tone(1976,.30,.06,"sine",.09)}}};
+    a:{tap:function(){tone(900,.045,.16,"sine",0,1900)},                                              /* 泡泡啵：很短、往上彈 */
+       open:function(){tone(700,.05,.15,"sine",0,1500)},
+       reg:function(){tone(900,.045,.15,"sine",0,1900);tone(1200,.05,.14,"sine",.07,2400)}},
+    b:{tap:function(){tone(1700,.08,.15,"sine",0,620);tone(2600,.02,.05,"sine")},                     /* 水滴咚：清亮的一滴 */
+       open:function(){tone(1400,.09,.14,"sine",0,560)},
+       reg:function(){tone(1500,.08,.14,"sine",0,600);tone(2100,.09,.13,"sine",.09,800)}},
+    c:{tap:function(){tone(2349,.16,.09,"triangle");tone(4699,.08,.03,"sine")},                       /* 音樂盒叮：亮、可愛的小鈴 */
+       open:function(){tone(1976,.16,.08,"triangle");tone(3951,.08,.03,"sine")},
+       reg:function(){tone(2093,.14,.09,"triangle");tone(3136,.20,.08,"triangle",.10);tone(6272,.06,.02,"sine",.10)}}};
   function play(kind,t){var S=SETS[t||theme]||SETS[THEME];(S[kind]||S.tap)()}
   window.drlinSfx={play:play,theme:function(){return theme},use:function(t){if(/^[abc]$/.test(t)){theme=t;try{localStorage.setItem(TKEY,t)}catch(e){}}}};
   document.addEventListener("pointerdown",function(e){
