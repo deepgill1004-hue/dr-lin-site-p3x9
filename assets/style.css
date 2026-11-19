@@ -696,3 +696,31 @@ body{background-image:radial-gradient(rgba(35,65,61,.05) 1px,transparent 1.3px),
 .ngroup h3{display:flex;align-items:center;gap:8px;font-size:19px;margin-bottom:10px;color:var(--c)}
 .ngroup h3::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
 .ngroup h3 small{font-family:var(--sans);font-size:14px;color:var(--ink-2)}
+/* 文章頁（2026-11-19 凱菲：「整個文章是靠右、靠左、置中？很亂、看起來非常不舒服」）：
+   拿掉文章外框的粗框、錯位陰影和內圈虛線；「先講結論」框撐滿文章寬度，字和內文對齊同一條左邊線；主圖不再加貼紙框 */
+.post{border:0!important;box-shadow:none!important;border-radius:22px!important}
+.post::after{display:none!important}
+.post .hero-img{border:0!important;box-shadow:none!important;border-radius:16px!important}
+.post .answer{background:#efe2c2;border-radius:0;margin:0 -38px 26px;padding:20px 38px;box-shadow:inset 6px 0 0 var(--rose);gap:6px}
+.post .answer h2{font-size:21px;margin:0}
+.post .answer p{font-size:18px;line-height:1.85}
+@media(max-width:900px){.post{padding:22px 18px!important}.post .answer{margin:0 -18px 22px;padding:16px 18px}.post .answer p{font-size:17px}}
+/* 門診頁（凱菲：地圖旁那張羊毛氈小房子看不懂）：拿掉插圖，只留地址、總機、掛號與開地圖 */
+.nacts{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:8px}
+.post .evid.lead figcaption{text-align:left}
+.post .evid .pv{border:0!important;box-shadow:none!important;border-radius:16px!important}
+/* 「本篇重點」框三種樣式（2026-11-19 凱菲：「沒有其他的美編跟編框嗎？給我三個選」；選樣頁 pick.html，選定後改成 .post .answer 預設） */
+.post .answer.box-a,.post .answer.box-b,.post .answer.box-c{margin:22px 0 26px;box-shadow:none;border-radius:16px}
+.post .answer.box-a{position:relative;background:#fbf8f1;padding:32px 20px 18px;box-shadow:0 2px 12px rgba(35,65,61,.13)}
+.post .answer.box-a h2{position:absolute;top:-14px;left:14px;margin:0;background:var(--rose);color:#fff;font-family:var(--sans);font-weight:700;font-size:15.5px;line-height:1;padding:9px 14px 9px 12px;border-radius:8px 8px 8px 2px;box-shadow:0 2px 4px rgba(35,65,61,.2)}
+.post .answer.box-b{position:relative;background:#cdd5c1;padding:24px 22px 20px}
+.post .answer.box-b::before{content:"";position:absolute;inset:8px;border:2px dashed rgba(246,243,236,.95);border-radius:11px;pointer-events:none}
+.post .answer.box-b h2{display:flex;align-items:center;gap:8px;font-size:20px}
+.post .answer.box-b h2::before{content:"";width:18px;height:16px;flex:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 16'%3E%3Cpath d='M9 15.5 1.6 8.3A4.4 4.4 0 0 1 9 2.6a4.4 4.4 0 0 1 7.4 5.7z' fill='%23a3444b'/%3E%3C/svg%3E") no-repeat center/contain}
+.post .answer.box-c{position:relative;background:#f7e6a6;border-radius:4px 4px 20px 4px;padding:26px 20px 20px;transform:rotate(-.6deg);box-shadow:0 7px 14px rgba(35,65,61,.17)}
+.post .answer.box-c::before{content:"";position:absolute;top:-11px;left:50%;width:96px;height:24px;transform:translateX(-50%) rotate(2deg);background:rgba(246,243,236,.78);box-shadow:0 1px 3px rgba(35,65,61,.12)}
+.post .answer.box-c h2{font-size:20px}
+@media(max-width:900px){.post .answer.box-a,.post .answer.box-b,.post .answer.box-c{margin-inline:0}}
+/* 門診頁路線動畫（汽車開到醫院的示意圖） */
+.nroute{display:block;max-width:640px;margin:16px 0 6px;border-radius:26px;overflow:hidden;box-shadow:0 2px 10px rgba(35,65,61,.12)}
+.nroute svg{display:block;width:100%;height:auto}
