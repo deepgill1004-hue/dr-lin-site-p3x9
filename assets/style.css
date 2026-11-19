@@ -290,7 +290,7 @@ html.js .rv.in{opacity:1;transform:none}
 /* 主題館內文：一張連續的羊毛紙，段落用針腳虛線分開（不再一段一張卡） */
 .doc .body{background:var(--wool);border-radius:var(--r-lg);padding:40px 52px 48px;gap:0}
 .doc .sec{background:none;border-radius:0;padding:34px 0;border-top:2px dashed rgba(35,65,61,.2)}
-.doc .answer{background:#efe2c2;margin-bottom:8px}
+.doc .answer{background:#f9eeec;margin-bottom:8px}
 .doc .faq details{background:#fff}
 .doc .tile.wide{margin-top:28px;background:var(--felt)}
 @media(max-width:900px){.doc .body{padding:26px 20px 32px;border-radius:var(--r-md)}.doc .sec{padding:28px 0}}
@@ -701,24 +701,18 @@ body{background-image:radial-gradient(rgba(35,65,61,.05) 1px,transparent 1.3px),
 .post{border:0!important;box-shadow:none!important;border-radius:22px!important}
 .post::after{display:none!important}
 .post .hero-img{border:0!important;box-shadow:none!important;border-radius:16px!important}
-.post .answer{background:#efe2c2;border-radius:0;margin:0 -38px 26px;padding:20px 38px;box-shadow:inset 6px 0 0 var(--rose);gap:6px}
+.post .answer{background:#f9eeec;border-radius:18px;margin:22px 0 26px;padding:18px 20px;box-shadow:none;gap:6px}
 .post .answer h2{font-size:21px;margin:0}
 .post .answer p{font-size:18px;line-height:1.85}
-@media(max-width:900px){.post{padding:22px 18px!important}.post .answer{margin:0 -18px 22px;padding:16px 18px}.post .answer p{font-size:17px}}
+@media(max-width:900px){.post{padding:22px 18px!important}.post .answer{margin:0 0 22px;padding:16px}.post .answer p{font-size:17px}}
 /* 門診頁（凱菲：地圖旁那張羊毛氈小房子看不懂）：拿掉插圖，只留地址、總機、掛號與開地圖 */
 .nacts{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:8px}
 .post .evid.lead figcaption{text-align:left}
 .post .evid .pv{border:0!important;box-shadow:none!important;border-radius:16px!important}
-/* 「本篇重點」框三選一（2026-11-20 凱菲：「放一個很小的羊毛氈、小頭貼或是其他，底色淡淡的，有做一個色塊區分就可以」）
-   A 羊毛氈小頭像＋淡綠底、B 羊毛氈小愛心＋淡粉底、C 羊毛氈小筆記本＋淡米黃底；選定後把那一組改成 .post .answer 預設 */
-.post .answer.box-a,.post .answer.box-b,.post .answer.box-c{margin:22px 0 26px;box-shadow:none;border-radius:18px;padding:18px 20px 18px}
-.post .answer.box-a{background:#eef2e8}.post .answer.box-b{background:#f9eeec}.post .answer.box-c{background:#f7f1e2}
-.post .answer.box-a h2,.post .answer.box-b h2,.post .answer.box-c h2{display:flex;align-items:center;gap:10px;font-size:20px}
-.post .answer.box-a h2::before,.post .answer.box-b h2::before,.post .answer.box-c h2::before{content:"";width:36px;height:36px;border-radius:50%;flex:none;background:center/cover no-repeat;box-shadow:0 0 0 2px #fff,0 1px 4px rgba(35,65,61,.18)}
-.post .answer.box-a h2::before{background-image:url(../img/felt_avatar_sm.jpg)}
-.post .answer.box-b h2::before{background-image:url(../img/felt_heart_sm.jpg)}
-.post .answer.box-c h2::before{background-image:url(../img/felt_note_sm.jpg)}
-@media(max-width:900px){.post .answer.box-a,.post .answer.box-b,.post .answer.box-c{margin-inline:0}}
+/* 「本篇重點」框（2026-11-20 凱菲：「本篇的重點用 B」）：全站重點框一律淡粉底＋羊毛氈小愛心；A、C 兩組與三選一規則見 style.css.bak-boxB1120 */
+.answer{background:#f9eeec}
+.answer h2{display:flex;align-items:center;gap:10px}
+.answer h2::before{content:"";width:36px;height:36px;border-radius:50%;flex:none;background:url(../img/felt_heart_sm.jpg) center/cover no-repeat;box-shadow:0 0 0 2px #fff,0 1px 4px rgba(35,65,61,.18)}
 /* 門診頁地圖動畫（2026-11-20 凱菲：「風格不是羊毛氈嗎？」→ 先生羊毛氈場景與小車兩張圖，再用 CSS 讓小車沿小路開到醫院門口；減少動態時停在門口） */
 .froute{position:relative;display:block;max-width:640px;margin:16px 0 6px;border-radius:22px;overflow:hidden;box-shadow:0 2px 10px rgba(35,65,61,.14)}
 .froute img.fr-bg{display:block;width:100%;height:auto}
