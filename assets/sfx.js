@@ -2,14 +2,13 @@
    2026-11-12 菲菲選 B 毛氈貼紙後上線；2026-11-19 凱菲：「只要有點選就會有聲音」→ 所有可以點的東西都出聲（連結、按鈕、展開列、表單）。
    2026-11-20 凱菲：「我只要單音節就好了，你不要每次都搞成兩個音節」→ 第三輪：每組只有一個音（一個振盪器、不滑音、不疊第二個音），
    點連結、展開、掛號都是同一聲：a 叮（小鈴）、b 啵（泡泡）、c 嗒（輕敲）。前兩輪見 sfx.js.bak-3themes1119、sfx.js.bak-2nd1120。
-   預設用 THEME；網址帶 ?sfx=a／b／c 可以切換試聽（記在這台手機的 localStorage）。
+   2026-11-20 凱菲選 B 啵（「提示音選 B 啵」）→ 全站固定 B；網址試聽參數和手機記住的試聽組都不再讀。
    頁面右下 ♪ 開關照舊；手機開「減少動態效果」預設靜音；iPhone 側邊靜音鍵打開時瀏覽器不會出聲。 */
 (function(){
-  var KEY="drlin-sfx",TKEY="drlin-sfx-theme",THEME="a",ctx=null,out=null;
+  var KEY="drlin-sfx",TKEY="drlin-sfx-theme",THEME="b",ctx=null,out=null;
   var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
   var on=(function(){try{var v=localStorage.getItem(KEY);return v===null?!reduce:v==="1"}catch(e){return !reduce}})();
-  try{var q=new URLSearchParams(location.search).get("sfx");if(/^[abc]$/.test(q||""))localStorage.setItem(TKEY,q)}catch(e){}
-  var theme=(function(){try{var t=localStorage.getItem(TKEY);return /^[abc]$/.test(t||"")?t:THEME}catch(e){return THEME}})();
+  var theme=THEME;try{localStorage.removeItem(TKEY)}catch(e){}   /* 選定 B：清掉之前試聽時記住的組別 */
   function audio(){if(!ctx){var A=window.AudioContext||window.webkitAudioContext;if(!A)return null;ctx=new A();out=ctx.createGain();out.gain.value=.8;out.connect(ctx.destination)}
     if(ctx.state==="suspended")ctx.resume();return ctx}
   function tone(f,d,v,w){var c=audio();if(!c)return;var s=c.currentTime,o=c.createOscillator(),g=c.createGain();
