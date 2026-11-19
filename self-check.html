@@ -248,10 +248,10 @@ body{background:var(--wool);color:var(--ink);font-family:var(--sans);font-size:1
     play("next");show(s+1)})});
 
   /* ---------- 結果：句子照網站文章原句（心悸是什麼感覺、早期收縮、心房顫動、心悸看哪科） ---------- */
-  var READ={skip:["review-premature-contractions-97018e9a.html","img/quiz/q_skip.jpg","早期收縮是什麼？心臟漏跳一拍的原因與治療時機"],
+  var READ={skip:["premature-contractions.html","img/quiz/q_skip.jpg","早期收縮是什麼？心臟漏跳一拍的原因與治療時機"],
     messy:["af-symptoms-treatment.html","img/quiz/q_messy.jpg","心房顫動是什麼？症狀與治療一次看懂"],
-    fast:["review-palpitations-361e6db5.html","img/quiz/q_fast.jpg","心悸是什麼感覺？原因、哪些情況要馬上就醫"],
-    unsure:["review-choose-ep-doctor-25891f7c.html","img/quiz/q_unsure.jpg","心悸看哪科？心律不整掛號前可以準備的 7 件事"]};
+    fast:["palpitations.html","img/quiz/q_fast.jpg","心悸是什麼感覺？原因、哪些情況要馬上就醫"],
+    unsure:["choose-ep-doctor.html","img/quiz/q_unsure.jpg","心悸看哪科？心律不整掛號前可以準備的 7 件事"]};
   function lab(group,v){var el=document.querySelector('[data-group="'+group+'"] [data-v="'+v+'"]');return el?el.dataset.label:""}
   function labs(group){return has(group)?ans[group].map(function(v){return lab(group,v)}).join("；"):lab(group,"none")}
   function noteText(){
