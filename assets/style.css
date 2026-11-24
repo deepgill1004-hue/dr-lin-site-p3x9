@@ -732,3 +732,8 @@ body{background-image:radial-gradient(rgba(35,65,61,.05) 1px,transparent 1.3px),
 .talk-series .n{flex:none;width:24px;height:24px;border-radius:50%;background:var(--mustard);color:#fff;display:grid;place-items:center;font-size:13px;font-weight:700}
 .talk-series a.tt{color:var(--ink);text-decoration:underline;text-decoration-color:var(--mustard);text-underline-offset:3px}
 .talk-series em{flex:none;font-style:normal;font-size:13px;color:#fff;background:var(--moss);border-radius:999px;padding:1px 9px;white-space:nowrap}
+
+/* 2026-11-24 凱菲：網頁和手機的斷行要切乾淨——清單、表格、說明也避免孤字；短括號整段不拆，放不下整段換到下一行（build.py keep_paren） */
+li,td,th,dd,dt,figcaption,blockquote,small,.note{text-wrap:pretty}
+.kp{display:inline-block;max-width:100%;text-indent:0}
+td .kp,th .kp{white-space:nowrap;max-width:none}   /* 表格本來就能左右滑：括號整段放一行，欄寬跟著撐開，不在括號裡再斷 */
