@@ -82,115 +82,129 @@ body{background:var(--wool);color:var(--ink);font-family:var(--sans);font-size:1
 @keyframes wig{25%{transform:rotate(-2deg)}75%{transform:rotate(2deg)}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
-</head>
+<style id="lbcss">
+/* 2026-11-22 分行（凱菲：「我要手机版的段落是对的」）：site/linebreak.py 在建置時把每個詞包成 .nb（不拆）、一小句包成 .cl（放不下整句換行），一個文字節點外面再包 .lb；父層寫給 span 的樣式（膠囊底色、display:block、字級…）一律不傳進來，看起來跟原本一樣 */
+.nb,.lb{display:inline!important;font:inherit!important;color:inherit!important;background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0!important;margin:0!important;letter-spacing:inherit!important;text-transform:inherit!important;transform:none!important;flex:0 1 auto!important;min-width:auto!important;max-width:none!important;width:auto!important;height:auto!important;overflow:visible!important;text-overflow:clip!important;position:static!important;opacity:1!important;vertical-align:baseline!important}
+.nb{white-space:nowrap!important}.lb{white-space:inherit!important}
+.cl{display:inline-block!important;max-width:100%!important;text-indent:0!important;font:inherit!important;color:inherit!important;background:none!important;border:0!important;border-radius:0!important;padding:0!important;margin:0!important;box-shadow:none!important;transform:none!important;vertical-align:baseline!important;white-space:normal!important;position:static!important;flex:0 1 auto!important;letter-spacing:inherit!important}
+.nstats span,.hfoot span,.nsc span,.ntxt b,.ntxt small,.nsum b,.nsum small,.shelf b,.shelf small,.plist b,.nqs a,.video h3,.tile b,.btn,.chips a,.badges span,.days span,figcaption,summary,dt,th{text-wrap:balance}
+/* 論文頁「2016–2026」原本的方塊太窄、一定被折斷：方塊至少 230px，放不下就換成一欄 */
+.stats{grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))!important}.stats strong{white-space:nowrap}
+/* 首頁「影片」排四欄時，電腦版每張卡的文字只剩 78px、標題被擠碎：每欄至少 220px，放不下就自動變兩欄 */
+.nbody .videos{grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr))!important}
+/* 論文頁「其他期刊論文」：連結裡只有標題、沒有日期時，標題原本被塞進 4.6 字寬的日期欄；改成佔滿整列 */
+.alist a>.lb:only-child{grid-column:1/-1}
+/* 參考文獻的長英文字、網址：放不下就斷開，不撐出框（原本就有 3～7px 超出） */
+.srcs li,.srcs a{overflow-wrap:anywhere}
+</style></head>
 <body>
 <div class="app">
-  <div class="top"><a class="brand" href="index.html">← 林柏霖醫師｜心臟內科衛教</a><button class="snd" id="snd" aria-label="音效開關">♪</button></div>
+  <div class="top"><a class="brand" href="index.html"><span class="lb">← <span class="nb">林柏霖醫師</span>｜<span class="nb">心臟內科衛教</span></span></a><button class="snd" id="snd" aria-label="音效開關">♪</button></div>
   <div class="yarn" id="yarn" aria-hidden="true"><div class="done" id="done"></div></div>
   <div class="count" id="count"></div>
 
   <!-- 0 開場 -->
   <section class="screen show" data-step="0">
-    <h1 class="scttl"><span class="sticker">心跳怪怪的？</span><br><span class="sticker alt">1 分鐘小檢查</span></h1>
+    <h1 class="scttl"><span class="sticker"><span class="lb"><span class="cl"><span class="nb">心跳</span><span class="nb">怪怪的？</span></span></span></span><br><span class="sticker alt"><span class="lb"><span class="nb">1 分鐘</span><span class="nb">小檢查</span></span></span></h1>
     <img class="photo" src="img/quiz/q_intro.jpg" alt="羊毛氈心臟靠著一張縫了三個勾勾的小卡" width="960" height="640">
-    <p class="lead">回答 6 個問題，幫你整理三件事：要不要馬上就醫、該不該掛門診，最後送你一張可以帶去看診的小抄。這不是診斷，是讓你不慌張、看診時講得清楚。</p>
-    <button class="btn" data-go="1">開始</button>
+    <p class="lead"><span class="lb"><span class="cl"><span class="nb">回答</span> <span class="nb">6 個</span><span class="nb">問題，</span></span><span class="cl"><span class="nb">幫你整理</span><span class="nb">三件事：</span></span><span class="cl"><span class="nb">要不要</span><span class="nb">馬上</span><span class="nb">就醫、</span></span><span class="cl"><span class="nb">該不該掛</span><span class="nb">門診，</span></span><span class="nb">最後送</span><span class="nb">你一張</span><span class="nb">可以</span><span class="nb">帶去</span><span class="nb">看診的</span><span class="nb">小抄。</span><span class="cl"><span class="nb">這不是</span><span class="nb">診斷，</span></span><span class="cl"><span class="nb">是讓</span><span class="nb">你不</span><span class="nb">慌張、</span></span><span class="cl"><span class="nb">看診時</span><span class="nb">講得清楚。</span></span></span></p>
+    <button class="btn" data-go="1"><span class="nb">開始</span></button>
   </section>
 
   <!-- 1 紅旗 -->
   <section class="screen" data-step="1">
     <img class="photo sm" src="img/quiz/r_red.jpg" alt="羊毛氈插畫：電話話筒旁邊一顆小紅心，代表要立刻撥 119 求助" width="960" height="640">
-    <p class="q">先確認安全：心跳怪怪的時候，有沒有同時出現下面任何一種？</p>
-    <p class="hint">可以複選；都沒有就選最下面那格。</p>
+    <p class="q"><span class="lb"><span class="cl"><span class="nb">先確認</span><span class="nb">安全：</span></span><span class="cl"><span class="nb">心跳</span><span class="nb">怪怪的</span><span class="nb">時候，</span></span><span class="nb">有沒有</span><span class="nb">同時</span><span class="nb">出現</span><span class="nb">下面</span><span class="nb">任何一種？</span></span></p>
+    <p class="hint"><span class="lb"><span class="cl"><span class="nb">可以</span><span class="nb">複選；</span></span><span class="cl"><span class="nb">都沒有</span><span class="nb">就選</span><span class="nb">最下面那格。</span></span></span></p>
     <div class="opts" data-group="red">
-      <button class="opt" data-v="胸痛"><span class="dot"></span>胸痛</button>
-      <button class="opt" data-v="呼吸急促"><span class="dot"></span>呼吸急促、喘不過氣</button>
-      <button class="opt" data-v="頭暈"><span class="dot"></span>頭暈，或快要昏倒的感覺</button>
-      <button class="opt" data-v="昏倒"><span class="dot"></span>昏倒、失去意識</button>
-      <button class="opt" data-v="冷汗"><span class="dot"></span>不尋常的冒冷汗</button>
-      <button class="opt" data-v="中風"><span class="dot"></span>臉歪、單手無力、說話不清楚</button>
-      <button class="opt none" data-v="none"><span class="dot"></span>都沒有</button>
+      <button class="opt" data-v="胸痛"><span class="dot"></span><span class="nb">胸痛</span></button>
+      <button class="opt" data-v="呼吸急促"><span class="dot"></span><span class="lb"><span class="cl"><span class="nb">呼吸</span><span class="nb">急促、</span></span><span class="nb">喘不過氣</span></span></button>
+      <button class="opt" data-v="頭暈"><span class="dot"></span><span class="lb"><span class="nb">頭暈，</span><span class="cl"><span class="nb">或快要</span><span class="nb">昏倒的感覺</span></span></span></button>
+      <button class="opt" data-v="昏倒"><span class="dot"></span><span class="lb"><span class="nb">昏倒、</span><span class="nb">失去意識</span></span></button>
+      <button class="opt" data-v="冷汗"><span class="dot"></span><span class="lb"><span class="nb">不尋常的</span><span class="nb">冒冷汗</span></span></button>
+      <button class="opt" data-v="中風"><span class="dot"></span><span class="lb"><span class="nb">臉歪、</span><span class="cl"><span class="nb">單手</span><span class="nb">無力、</span></span><span class="cl"><span class="nb">說話</span><span class="nb">不清楚</span></span></span></button>
+      <button class="opt none" data-v="none"><span class="dot"></span><span class="nb">都沒有</span></button>
     </div>
-    <button class="btn" data-next="1" disabled>下一題</button>
+    <button class="btn" data-next="1" disabled><span class="nb">下一題</span></button>
   </section>
 
   <!-- 2 感覺像什麼 -->
   <section class="screen" data-step="2">
-    <p class="q">那種感覺，比較像哪一個？</p>
-    <p class="hint">選一個最接近的就好，說不上來也沒關係。</p>
+    <p class="q"><span class="lb"><span class="cl"><span class="nb">那種</span><span class="nb">感覺，</span></span><span class="nb">比較像哪一個？</span></span></p>
+    <p class="hint"><span class="lb"><span class="cl"><span class="nb">選一個</span><span class="nb">最接近的</span><span class="nb">就好，</span></span><span class="cl"><span class="nb">說不上來</span><span class="nb">也沒關係。</span></span></span></p>
     <div class="opts two" data-group="feel" data-single>
-      <button class="opt pic" data-v="skip" data-label="漏一拍，或重重跳一下"><img src="img/quiz/q_skip.jpg" alt="" width="960" height="480">漏一拍，或重重跳一下</button>
-      <button class="opt pic" data-v="messy" data-label="又快又亂、忽快忽慢"><img src="img/quiz/q_messy.jpg" alt="" width="960" height="640">又快又亂、忽快忽慢</button>
-      <button class="opt pic" data-v="fast" data-label="一直跳很快"><img src="img/quiz/q_fast.jpg" alt="" width="960" height="640">一直跳很快</button>
-      <button class="opt pic" data-v="unsure" data-label="說不上來"><img src="img/quiz/q_unsure.jpg" alt="" width="960" height="640">說不上來</button>
+      <button class="opt pic" data-v="skip" data-label="漏一拍，或重重跳一下"><img src="img/quiz/q_skip.jpg" alt="" width="960" height="480"><span class="lb"><span class="nb">漏一拍，</span><span class="nb">或重重跳一下</span></span></button>
+      <button class="opt pic" data-v="messy" data-label="又快又亂、忽快忽慢"><img src="img/quiz/q_messy.jpg" alt="" width="960" height="640"><span class="lb"><span class="nb">又快又亂、</span><span class="nb">忽快忽慢</span></span></button>
+      <button class="opt pic" data-v="fast" data-label="一直跳很快"><img src="img/quiz/q_fast.jpg" alt="" width="960" height="640"><span class="nb">一直跳很快</span></button>
+      <button class="opt pic" data-v="unsure" data-label="說不上來"><img src="img/quiz/q_unsure.jpg" alt="" width="960" height="640"><span class="nb">說不上來</span></button>
     </div>
-    <button class="btn" data-next="2" disabled>下一題</button>
+    <button class="btn" data-next="2" disabled><span class="nb">下一題</span></button>
   </section>
 
   <!-- 3 持續多久 -->
   <section class="screen" data-step="3">
     <img class="photo sm" src="img/quiz/q_duration.jpg" alt="羊毛氈插畫：沙漏旁邊一顆小紅心，代表心悸一次持續多久" width="960" height="640">
-    <p class="q">一次大概持續多久？</p>
+    <p class="q"><span class="lb"><span class="cl"><span class="nb">一次</span><span class="nb">大概</span><span class="nb">持續多久？</span></span></span></p>
     <div class="opts" data-group="dur" data-single>
-      <button class="opt" data-v="sec" data-label="幾秒就恢復"><span class="dot"></span>幾秒就恢復</button>
-      <button class="opt" data-v="min" data-label="好幾分鐘才停"><span class="dot"></span>好幾分鐘才停</button>
-      <button class="opt" data-v="now" data-label="現在還在，休息後也沒緩解"><span class="dot"></span>現在還在，休息後也沒緩解</button>
+      <button class="opt" data-v="sec" data-label="幾秒就恢復"><span class="dot"></span><span class="lb"><span class="nb">幾秒</span><span class="nb">就恢復</span></span></button>
+      <button class="opt" data-v="min" data-label="好幾分鐘才停"><span class="dot"></span><span class="nb">好幾分鐘才停</span></button>
+      <button class="opt" data-v="now" data-label="現在還在，休息後也沒緩解"><span class="dot"></span><span class="lb"><span class="cl"><span class="nb">現在</span><span class="nb">還在，</span></span><span class="cl"><span class="nb">休息後</span><span class="nb">也沒緩解</span></span></span></button>
     </div>
-    <button class="btn" data-next="3" disabled>下一題</button>
+    <button class="btn" data-next="3" disabled><span class="nb">下一題</span></button>
   </section>
 
   <!-- 4 怎麼開始 -->
   <section class="screen" data-step="4">
     <img class="photo sm" src="img/quiz/q_onset.jpg" alt="羊毛氈插畫：一座陡坡和一座緩坡，代表心悸是突然開始還是慢慢開始" width="960" height="640">
-    <p class="q">它是怎麼開始的？</p>
-    <p class="hint">醫師常會問這一題，先想一下，看診時就答得出來。</p>
+    <p class="q"><span class="lb"><span class="cl"><span class="nb">它是</span><span class="nb">怎麼</span><span class="nb">開始的？</span></span></span></p>
+    <p class="hint"><span class="lb"><span class="cl"><span class="nb">醫師</span><span class="nb">常會問</span><span class="nb">這一題，</span></span><span class="cl"><span class="nb">先想</span><span class="nb">一下，</span></span><span class="cl"><span class="nb">看診時</span><span class="nb">就答得出來。</span></span></span></p>
     <div class="opts" data-group="onset" data-single>
-      <button class="opt" data-v="sudden" data-label="突然開始、突然停"><span class="dot"></span>突然開始、突然停</button>
-      <button class="opt" data-v="slow" data-label="慢慢變快、慢慢緩下來"><span class="dot"></span>慢慢變快、慢慢緩下來</button>
-      <button class="opt" data-v="idk" data-label="沒注意到"><span class="dot"></span>沒注意到</button>
+      <button class="opt" data-v="sudden" data-label="突然開始、突然停"><span class="dot"></span><span class="lb"><span class="cl"><span class="nb">突然</span><span class="nb">開始、</span></span><span class="nb">突然停</span></span></button>
+      <button class="opt" data-v="slow" data-label="慢慢變快、慢慢緩下來"><span class="dot"></span><span class="lb"><span class="cl"><span class="nb">慢慢</span><span class="nb">變快、</span></span><span class="nb">慢慢緩下來</span></span></button>
+      <button class="opt" data-v="idk" data-label="沒注意到"><span class="dot"></span><span class="nb">沒注意到</span></button>
     </div>
-    <button class="btn" data-next="4" disabled>下一題</button>
+    <button class="btn" data-next="4" disabled><span class="nb">下一題</span></button>
   </section>
 
   <!-- 5 發作前在做什麼 -->
   <section class="screen" data-step="5">
     <img class="photo sm" src="img/quiz/q_trigger.jpg" alt="羊毛氈插畫：咖啡杯、月亮和茶杯，代表喝咖啡、熬夜這類可能的誘發因素" width="960" height="640">
-    <p class="q">發作前後，有沒有這些情況？</p>
-    <p class="hint">可以複選；想不到就選最下面那格。</p>
+    <p class="q"><span class="lb"><span class="cl"><span class="nb">發作</span><span class="nb">前後，</span></span><span class="cl"><span class="nb">有沒有</span><span class="nb">這些情況？</span></span></span></p>
+    <p class="hint"><span class="lb"><span class="cl"><span class="nb">可以</span><span class="nb">複選；</span></span><span class="cl"><span class="nb">想不到</span><span class="nb">就選</span><span class="nb">最下面那格。</span></span></span></p>
     <div class="opts" data-group="trig">
-      <button class="opt" data-v="caffeine" data-label="喝了咖啡、濃茶或能量飲料"><span class="dot"></span>喝了咖啡、濃茶或能量飲料</button>
-      <button class="opt" data-v="smoke" data-label="抽菸或喝酒"><span class="dot"></span>抽菸或喝酒</button>
-      <button class="opt" data-v="sleep" data-label="熬夜、睡不好"><span class="dot"></span>熬夜、睡不好</button>
-      <button class="opt" data-v="stress" data-label="壓力大、焦慮"><span class="dot"></span>壓力大、焦慮</button>
-      <button class="opt" data-v="exercise" data-label="剛運動完"><span class="dot"></span>剛運動完</button>
-      <button class="opt" data-v="med" data-label="發燒，或吃了感冒、鼻塞藥"><span class="dot"></span>發燒，或吃了感冒、鼻塞藥</button>
-      <button class="opt none" data-v="none" data-label="想不到"><span class="dot"></span>想不到</button>
+      <button class="opt" data-v="caffeine" data-label="喝了咖啡、濃茶或能量飲料"><span class="dot"></span><span class="lb"><span class="cl"><span class="nb">喝了</span><span class="nb">咖啡、</span></span><span class="cl"><span class="nb">濃茶</span><span class="nb">或能量飲料</span></span></span></button>
+      <button class="opt" data-v="smoke" data-label="抽菸或喝酒"><span class="dot"></span><span class="lb"><span class="nb">抽菸</span><span class="nb">或喝酒</span></span></button>
+      <button class="opt" data-v="sleep" data-label="熬夜、睡不好"><span class="dot"></span><span class="lb"><span class="nb">熬夜、</span><span class="nb">睡不好</span></span></button>
+      <button class="opt" data-v="stress" data-label="壓力大、焦慮"><span class="dot"></span><span class="nb">壓力大、焦慮</span></button>
+      <button class="opt" data-v="exercise" data-label="剛運動完"><span class="dot"></span><span class="nb">剛運動完</span></button>
+      <button class="opt" data-v="med" data-label="發燒，或吃了感冒、鼻塞藥"><span class="dot"></span><span class="lb"><span class="nb">發燒，</span><span class="cl"><span class="nb">或吃了</span><span class="nb">感冒、</span></span><span class="nb">鼻塞藥</span></span></button>
+      <button class="opt none" data-v="none" data-label="想不到"><span class="dot"></span><span class="nb">想不到</span></button>
     </div>
-    <button class="btn" data-next="5" disabled>下一題</button>
+    <button class="btn" data-next="5" disabled><span class="nb">下一題</span></button>
   </section>
 
   <!-- 6 頻率與身體狀況 -->
   <section class="screen" data-step="6">
     <img class="photo sm" src="img/quiz/q_often.jpg" alt="羊毛氈插畫：月曆上點著幾個紅點，代表心悸多久發作一次" width="960" height="640">
-    <p class="q">最後一題：下面這些，有沒有符合你的？</p>
-    <p class="hint">可以複選；都沒有就選最下面那格。</p>
+    <p class="q"><span class="lb"><span class="nb">最後一題：</span><span class="cl"><span class="nb">下面</span><span class="nb">這些，</span></span><span class="cl"><span class="nb">有沒有</span><span class="nb">符合你的？</span></span></span></p>
+    <p class="hint"><span class="lb"><span class="cl"><span class="nb">可以</span><span class="nb">複選；</span></span><span class="cl"><span class="nb">都沒有</span><span class="nb">就選</span><span class="nb">最下面那格。</span></span></span></p>
     <div class="opts" data-group="clinic">
-      <button class="opt" data-v="first" data-label="第一次出現，或這次感覺和以前不同"><span class="dot"></span>第一次出現心悸，或這次的感覺和以前不同</button>
-      <button class="opt" data-v="more" data-label="越來越頻繁"><span class="dot"></span>越來越頻繁</button>
-      <button class="opt" data-v="extra" data-label="常感覺到多跳的心跳"><span class="dot"></span>常感覺到多跳的心跳，每分鐘超過 6 下，或連續 3 下以上一起出現</button>
-      <button class="opt" data-v="pulse" data-label="休息時脈搏超過每分鐘 100 下"><span class="dot"></span>沒有運動、焦慮或發燒，休息時脈搏卻超過每分鐘 100 下</button>
-      <button class="opt" data-v="disease" data-label="有心臟病或三高"><span class="dot"></span>原本就有心臟病，或有高血壓、糖尿病、高血脂</button>
-      <button class="opt none" data-v="none" data-label="都沒有"><span class="dot"></span>都沒有</button>
+      <button class="opt" data-v="first" data-label="第一次出現，或這次感覺和以前不同"><span class="dot"></span><span class="lb"><span class="cl"><span class="nb">第一次</span><span class="nb">出現</span><span class="nb">心悸，</span></span><span class="cl"><span class="nb">或這次的</span><span class="nb">感覺</span><span class="nb">和以前不同</span></span></span></button>
+      <button class="opt" data-v="more" data-label="越來越頻繁"><span class="dot"></span><span class="nb">越來越頻繁</span></button>
+      <button class="opt" data-v="extra" data-label="常感覺到多跳的心跳"><span class="dot"></span><span class="lb"><span class="cl"><span class="nb">常感覺</span><span class="nb">到多</span><span class="nb">跳的</span><span class="nb">心跳，</span></span><span class="cl"><span class="nb">每分鐘</span><span class="nb">超過</span> <span class="nb">6 下，</span></span><span class="cl"><span class="nb">或連續</span> <span class="nb">3 下</span><span class="nb">以上</span><span class="nb">一起出現</span></span></span></button>
+      <button class="opt" data-v="pulse" data-label="休息時脈搏超過每分鐘 100 下"><span class="dot"></span><span class="lb"><span class="cl"><span class="nb">沒有</span><span class="nb">運動、</span></span><span class="cl"><span class="nb">焦慮</span><span class="nb">或發燒，</span></span><span class="nb">休息時</span><span class="nb">脈搏卻</span><span class="nb">超過</span><span class="cl"><span class="nb">每分鐘</span> <span class="nb">100 下</span></span></span></button>
+      <button class="opt" data-v="disease" data-label="有心臟病或三高"><span class="dot"></span><span class="lb"><span class="cl"><span class="nb">原本</span><span class="nb">就有</span><span class="nb">心臟病，</span></span><span class="cl"><span class="nb">或有</span><span class="nb">高血壓、</span></span><span class="nb">糖尿病、</span><span class="nb">高血脂</span></span></button>
+      <button class="opt none" data-v="none" data-label="都沒有"><span class="dot"></span><span class="nb">都沒有</span></button>
     </div>
-    <button class="btn" data-next="6" disabled>看結果</button>
+    <button class="btn" data-next="6" disabled><span class="nb">看結果</span></button>
   </section>
 
   <!-- 7 結果 -->
   <section class="screen" data-step="7" id="res"></section>
 
-  <p class="fine">本頁內容整理自林柏霖醫師網站的衛教文章，是一般衛教，不能取代面對面的診察。</p>
+  <p class="fine"><span class="lb"><span class="nb">本頁</span><span class="nb">內容</span><span class="nb">整理自</span><span class="nb">林柏霖醫師</span><span class="nb">網站的</span><span class="nb">衛教文章，</span><span class="cl"><span class="nb">是一般</span><span class="nb">衛教，</span></span><span class="cl"><span class="nb">不能</span><span class="nb">取代</span><span class="nb">面對面的診察。</span></span></span></p>
 </div>
-<div class="toast" id="toast">小抄已複製</div>
+<div class="toast" id="toast"><span class="lb"><span class="nb">小抄</span><span class="nb">已複製</span></span></div>
 
 <script>
 (function(){
